@@ -1,0 +1,29 @@
+Konfiguracja Gita:
+
+$ git config --global User.name "Zbigniew Bukowski"
+$ git config --global User.email "zbigniewbukowski87@gmail.com"
+$ git config --global --list
+
+
+$ git init	- Tworzenie Repozytorim
+
+$ git log	- sprawdzenie listy rewizji
+$ git log --oneline	- sprawdzenie skróconej listy rewizji
+$ git log --graph	- wyświetlenie grafu rewizji w aktualnym branchu
+$ git log --graph --oneline	- wyświetlenie skróconego grafu rewizji w aktualnym branchu
+$ git log --graph --oneline --all	- wyświetlenie skróconego grafu rewizji dla wszystkich branchów
+
+$ git checkout <ID_rewizji_do_kotórej_chcemy_wrócić>	- Skok do wybranej rewizji
+$ git checkout master	- skok do najnowszej rewizji i oznaczenie jej znacznikiem Head (wyjście ze stanu detached head)
+$ git checkout head~2	- cofnięcie się o dwie rewizje do tyłu
+$ git checkout head~	- cofnięcie się o jedną rewizję do tyłu
+
+$ git clean -nd 	- sprawdzenie jakie pliki nieśledzone są do usunięcia
+$ git clean -fd		- usunięcie nieśledzonych plików
+
+$ git branch <nazwa_brancha> 	- tworzenie nowej gałęzi	
+$ git checkout <nazwa_brancha>	- przeniesienie się (i wskaźnika Head) na danego brancha
+$ git checkout -b <nazwa_brancha> master~	- utworzenie nowego brancha 1 rewizję przed znacznikiem master
+
+
+

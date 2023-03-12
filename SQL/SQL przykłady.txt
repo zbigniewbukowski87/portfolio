@@ -1,0 +1,246 @@
+SELECT
+
+	SELECT * FROM `categories`;
+	SELECT CategoryName FROM `categories`;
+	SELECT * FROM `customers`;
+	SELECT Country FROM `customers`;
+	SELECT FirstName, LastName FROM `employees`;
+
+SELECT DISTINCT
+
+	SELECT DISTINCT City FROM `customers`;
+	SELECT DISTINCT Country FROM `customers`;
+	SELECT DISTINCT City FROM `suppliers`;
+	SELECT DISTINCT Country FROM `suppliers`;
+	SELECT DISTINCT Country FROM customers;
+
+SELECT WHERE
+
+	SELECT * FROM `suppliers` WHERE Country = 'UK';
+	SELECT * FROM `suppliers` WHERE SupplierID >= 10;
+	SELECT * FROM `employees` WHERE EmployeeID <=5;
+	SELECT ProductName FROM `products` WHERE Price > 20;
+	SELECT Unit FROM `products` WHERE Price < 20;
+	SELECT DISTINCT Country FROM customers WHERE Country LIKE 'G%';
+
+SELECT WHERE AND
+
+	SELECT * FROM `products` Where CategoryID = 1 AND Price <= 15;
+
+SELECT WHERE OR
+
+	SELECT * FROM `customers` WHERE Country = 'Germany' OR City = 'London';
+	SELECT * FROM `customers` WHERE Country = 'Germany' OR City = 'Madrid';
+
+SELECT WHERE NOT
+
+	SELECT * FROM `customers` WHERE NOT Country = 'Germany';
+	SELECT * FROM `customers` WHERE Country = 'Germany' AND NOT City = 'Berlin';
+
+SELECT WHERE IS NULL/IS NOT NULL
+
+	SELECT * FROM `suppliers` WHERE PostalCode IS NULL;
+	SELECT * FROM 'employees' WHERE Firstname IS NOT NULL;
+	SELECT * FROM `products` WHERE SupplierID IS NULL;
+
+SELECT WHERE LIKE
+
+	SELECT * FROM `customers` WHERE Country LIKE 'G%';
+	SELECT * FROM `customers` WHERE City LIKE '_o%';
+	SELECT SUM(Price) FROM `products` WHERE Unit LIKE '12%';
+
+SELECT WHERE BETWEEN
+
+	SELECT COUNT(Price) FROM `products` WHERE Price BETWEEN 30 AND 40;
+	SELECT * FROM `orders` WHERE OrderDate BETWEEN '1996-10-01' AND '1996-10-31';
+	SELECT COUNT(OrderDate) FROM `orders` WHERE OrderDate BETWEEN '1996-10-01' AND '1996-10-31';
+
+
+SELECT TOP/ LIMIT / FETCH FIRST... ROWS ONLY
+
+	MySQL		SELECT * FROM employees LIMIT 5;	
+	SQL Server	SELECT TOP 5 FROM employees
+	ORACLE		SELECT * FROM employees FETCH FIRST 5 ROWS ONLY
+
+	SELECT * FROM `products` ORDER BY Price DESC LIMIT 3;
+
+
+SELECT MAX()
+
+	SELECT MAX(price) FROM `products`;
+
+SELECT AS
+
+	SELECT AVG(Price) AS 'Średnia cena produktu' FROM `products`;
+	SELECT CustomerName AS 'klienci na literę B' FROM `customers` WHERE CustomerName LIKE 'B%';
+
+SELECT MIN()
+
+	SELECT MIN(price) FROM `products`;
+
+SELECT COUNT()
+
+	SELECT COUNT(Country) FROM `customers` WHERE Country = 'Germany' AND NOT City = 'Berlin';
+	SELECT COUNT(Price) FROM `products` WHERE Price > 30;
+
+SEECT AVG()
+
+	SELECT AVG(Price) FROM `products`;
+	SELECT AVG(Price) FROM `products` WHERE SupplierID = 7;
+
+SELECT SUM()
+
+	SELECT SUM(Price) FROM `products` WHERE SupplierID = 7;
+
+ORDER BY
+
+	SELECT * FROM `orders` WHERE OrderDate BETWEEN '1996-07-15' AND '1996-07-30' ORDER BY ShipperID ASC, OrderID DESC LIMIT 2;
+	SELECT * FROM `customers` ORDER BY Country ASC, City ASC;
+	SELECT * FROM `products` WHERE SupplierID >= 20 ORDER BY Price DESC;
+
+INSERT INTO
+
+	INSERT INTO orders (CustomerID,OrderDate) VALUES (90,'1987-11-18');
+	INSERT INTO customers VALUES (null,'Zbigniew Bukowski','Zbyszek','Legicka','Środa Śląska','55-300','Poland');
+	INSERT INTO products (ProductName, Price, CategoryID, SupplierID) VALUES ('Krzesło', 25, 1,1);
+
+UPDATE
+
+	UPDATE products SET Price = 68 WHERE ProductID = 7;
+	UPDATE employees SET LastName = 'Król' Where LastName = 'King';
+	UPDATE customers SET City = 'Milano', Country = 'Italy' Where CustomerName LIKE '%horn';
+	UPDATE shippers SET Phone = 'Brak' Where Phone IS NULL;
+	UPDATE newemployees SET Age = 35 WHERE FirstName = 'Zbigniew';
+	UPDATE newemployees SET Age = 45 WHERE LastName = 'Milnicki'
+
+DELETE
+
+	DELETE FROM customers WHERE CustomerName = 'zbigniew bukowski';
+	DELETE FROM shippers WHERE ShipperID BETWEEN 4 AND 5;
+
+GROUP BY
+
+	SELECT Country AS 'Kraj', COUNT(CustomerID) AS 'Liczba klientów' FROM customers GROUP BY Country;
+	SELECT COUNT(CustomerID), Country FROM customers GROUP BY Country;
+	SELECT CategoryID, SUM(Price) From products GROUP BY CategoryID ORDER BY SUM(Price) DESC;
+	SELECT CategoryID, SupplierID, SUM(Price) From products WHERE CategoryID BETWEEN 1 AND 5 GROUP BY CategoryID, SupplierID;
+	SELECT Country, COUNT(CustomerID) AS 'Liczba osób' FROM `customers` GROUP BY Country ORDER BY COUNT(CustomerID) DESC;
+
+HAVING
+
+	SELECT COUNT(CustomerID), Country FROM customers GROUP BY Country HAVING COUNT(CustomerID)>5;
+	SELECT Country, COUNT(CustomerName) AS 'Liczba osób' FROM `customers` GROUP BY Country HAVING COUNT(CustomerName)>2 ORDER BY COUNT(CustomerName) DESC;
+	SELECT Country AS 'Kraj', COUNT(SupplierID) AS 'Liczba dostawców' FROM suppliers GROUP BY Country ORDER BY COUNT(SupplierID) DESC;
+
+INNER JOIN
+
+	SELECT customers.CustomerName, orders.OrderDate FROM orders INNER JOIN customers ON orders.CustomerID = customers.CustomerID;
+	SELECT products.ProductName, categories.CategoryName FROM products INNER JOIN categories ON products.CategoryID = categories.CategoryID;
+	SELECT orders.OrderID, customers.CustomerName, employees.LastName AS 'Nazwisko sprzedawcy', shippers.ShipperName AS 'Spedycja' FROM orders INNER JOIN customers ON orders.CustomerID = customers.CustomerID INNER JOIN employees ON orders.EmployeeID = employees.EmployeeID INNER JOIN shippers ON orders.ShipperID=shippers.ShipperID ORDER BY OrderID ASC;
+	SELECT products.ProductID, products.ProductName AS 'Nazwa produktu', suppliers.SupplierName AS 'Nazwa dostawcy', suppliers.Country AS 'Kraj pochodzenia' FROM products INNER JOIN suppliers ON products.SupplierID = suppliers.SupplierID;
+	SELECT products.ProductID, products.ProductName AS 'Nazwa produktu', suppliers.SupplierName AS 'Nazwa dostawcy', suppliers.Country AS 'Kraj pochodzenia', COUNT(products.ProductID) FROM products INNER JOIN suppliers ON products.SupplierID = suppliers.SupplierID GROUP BY suppliers.Country ORDER BY COUNT(products.ProductID) DESC;
+	SELECT products.ProductName, order_details.Quantity FROM products INNER JOIN order_details ON products.ProductID = order_details.ProductID;	
+	SELECT orders.OrderID, orders.OrderDate, employees.FirstName FROM orders INNER JOIN employees ON orders.employee = employees.EmployeeID;
+
+LEFT JOIN
+
+	SELECT products.ProductID, products.ProductName, suppliers.SupplierName FROM products LEFT JOIN suppliers ON products.SupplierID = suppliers.SupplierID ORDER BY ProductID ASC;
+
+RIGHT JOIN
+
+	SELECT products.ProductID, products.ProductName, suppliers.SupplierName FROM products RIGHT JOIN suppliers ON products.SupplierID = suppliers.SupplierID ORDER BY ProductID ASC;
+
+UNION / UNION ALL
+
+	SELECT Country FROM customers UNION SELECT Country FROM suppliers;
+	SELECT Country FROM customers UNION ALL SELECT Country FROM suppliers;
+
+CREATE DATABASE
+
+	CREATE DATABASE testowa;
+	CREATE DATABASE sklep;
+
+DROP DATABASE
+
+	DROP DATABASE testowa;
+
+CREATE TABLE
+
+	CREATE TABLE employees (EmployeeID int, FirstName varchar(40) NOT NULL, LastName varchar(80), BirthDate DATE);
+	CREATE TABLE NewEmployees AS SELECT FirstName, LastName FROM employees;
+	CREATE TABLE produkty ( ID int PRIMARY KEY AUTO_INCREMENT, nazwa varchar(150), IlośćSztuk int, Cena int);
+
+ALTER TABLE ADD
+
+	ALTER TABLE newemployees ADD Age int NOT NULL;
+
+ALTER COLUMN MODIFY COLUMN
+
+	ALTER TABLE newemployees MODIFY COLUMN Age varchar(20);
+
+ALTER COLUMN DROP COLUMN
+
+	ALTER TABLE newemployees DROP COLUMN Age;
+	ALTER TABLE produkty DROP COLUMN price;
+
+DROP TABLE
+
+	DROP TABLE newemployees;
+
+CASE
+
+	SELECT OrderID, Quantity, CASE WHEN Quantity > 30 THEN 'ilość wyższa niż 30' WHEN Quantity = 30 THEN 'Ilość równa 30' ELSE 'ilość poniżej 30' END AS 'Opis ilości' FROM `order_details`; 
+	SELECT OrderID, OrderDate, CASE WHEN OrderDate > '1996-08-01' THEN 'Nowe zamówienie' ELSE 'Stare zamówienie' END AS 'Opis zamówienia' FROM `orders`
+	SELECT orders.OrderID, employees.FirstName, CASE WHEN employees.FirstName LIKE '%a' THEN 'Kobieta' ELSE 'Mężczyzna' END AS 'Płeć' FROM orders INNER JOIN employees ON orders.EmployeeID = employees.EmployeeID;
+	SELECT *, CASE WHEN Quantity <= 10 THEN 'mała ilość' WHEN Quantity BETWEEN 11 AND 20 THEN 'średnia ilość' ELSE 'duża ilość' END AS 'ilość zamówienia' FROM order_details;
+
+CAST
+	SELECT OrderID, CAST(OrderDate AS int ) FROM `orders`;
+
+CONSTRAINT/CHECK
+
+	CREATE TABLE użytkownicy_serwisu(ID int NOT NULL AUTO_INCREMENT, Płeć varchar(50) CHECK (Płeć IN ('kobieta' OR 'mężczyzna')), Stan_cywilny varchar(50), Orientacja varchar(50) CHECK(Orientacja IN ('straihgt', 'bi', 'gay', 'lesbian')), PRIMARY KEY (ID) );
+
+IN
+
+	SELECT * FROM `suppliers` WHERE Country IN (SELECT Country FROM Customers);
+
+PODZAPYTANIA
+
+	SELECT * FROM `products` WHERE Price > (SELECT Price FROM products WHERE ProductID = 8) 
+
+CONCAT
+
+	SELECT CONCAT (LastName, " ", FirstName) From employees;
+	SELECT CONCAT (SupplierName, " ",ContactName, " ", Country)  FROM `suppliers`
+
+BŁĘDY
+
+	SELECT orders(OrderID), orders(OrderDate), employees(FirstName) FROM orders INNER JOIN employees ON orders(employee) = employees(EmployeeID);
+	--> Użyto nawiasów zamiast kropek przy wyborze kolumn z tabel
+	SELECT orders.OrderID, orders.OrderDate, employees.FirstName FROM orders INNER JOIN employees ON orders.employee = employees.EmployeeID;
+
+	SELECT OrderID, Quantity, CASE WHEN Quantity > 30 THEN 'ilość wyższa niż 30' WHEN Quantity = 30 THEN 'Ilość równa 30' ELSE 'ilość poniżej 30' END AS Opis ilości FROM `order_details`; 
+	--> Brak cudzysłowia przed funkcją FROM
+	SELECT OrderID, Quantity, CASE WHEN Quantity > 30 THEN 'ilość wyższa niż 30' WHEN Quantity = 30 THEN 'Ilość równa 30' ELSE 'ilość poniżej 30' END AS 'Opis ilości' FROM `order_details`; 
+
+	SELECT *, CASE WHEN Quantity <= 10 THEN 'mała ilość' WHEN Quantity BETWEEN 11 AND 20 THEN 'średnia ilość' ELSE 'duża ilość' END AS 'ilość zamówienia' FROM 'order_details';
+	--> Cudzysłów w nazwie tebeli order details na końcu
+	SELECT *, CASE WHEN Quantity <= 10 THEN 'mała ilość' WHEN Quantity BETWEEN 11 AND 20 THEN 'średnia ilość' ELSE 'duża ilość' END AS 'ilość zamówienia' FROM order_details;
+
+	SELECT * CASE WHEN Quantity <= 10 THEN 'mała ilość' WHEN Quantity BETWEEN 11 AND 20 THEN 'średnia ilość' ELSE 'duża ilość' END AS 'ilość zamówienia' FROM order_details;
+	--> Brak przecinka przed formułą CASE
+	SELECT *, CASE WHEN Quantity <= 10 THEN 'mała ilość' WHEN Quantity BETWEEN 11 AND 20 THEN 'średnia ilość' ELSE 'duża ilość' END AS 'ilość zamówienia' FROM order_details;
+
+	SELECT * FROM `products` Where CategoryID = 1 AND Price =< 15;		
+	--> znak równości przed znakiem mniejszości
+	SELECT * FROM `products` Where CategoryID = 1 AND Price <= 15;
+
+	SELECT * FROM `customers` WHERE Country NOT = 'Germany';
+	--> Warunek NOT powinien być łącznie z klauzulą WHERE:
+	SELECT * FROM `customers` WHERE NOT Country = 'Germany'
+
+	SELECT * FROM `products` ORDER BY Price DESC LIMIT(3);
+	--> Liczba rekordów w klauzuli LIMIT podana w nawiasie
+	SELECT * FROM `products` ORDER BY Price DESC LIMIT 3;
+	
