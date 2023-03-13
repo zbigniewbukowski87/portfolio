@@ -3,9 +3,13 @@ SELECT DISTINCT productLine FROM `products` ORDER BY productLine ASC;
 
 SELECT AS
 SELECT CustomerName AS 'Imię i nazwisko' , City AS 'Miasto'  FROM `customers`;
+SELECT ProductName, Price AS 'Ceny napojów rosnąco' FROM `products`  WHERE CategoryID = 1 ORDER BY Price ASC;
+SELECT CustomerName AS 'Lista klientów z Niemiec' FROM `customers` WHERE Country = 'Germany';
+SELECT MIN(BirthDate) AS 'Data urodzenia najstarszego pracownika' FROM employees;
 
 SELECT WHERE
 SELECT * FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '2004-03-01' ORDER BY paymentDate ASC
+SELECT * FROM `employees` WHERE BirthDate > '1960-01-01';
 
 SELECT MIN
 SELECT MIN(paymentDate), customerNumber,checkNumber,amount FROM `payments`;
@@ -28,21 +32,15 @@ SELECT SUM(Price) FROM products WHERE CategoryID = 2;
 SELECT SUM(Price) FROM `products` WHERE SupplierID = 2;
 SELECT SUM(amount) FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '2004-01-31'
 
+SELECT AVG
 SELECT AVG(Price) AS 'Średnia Cena napojów' FROM `products` WHERE CategoryID = 1;
 
-SELECT ProductName, Price AS 'Ceny napojów rosnąco' FROM `products`  WHERE CategoryID = 1 ORDER BY Price ASC;
-
-SELECT * FROM `employees` WHERE BirthDate > '1960-01-01';
-
+ORDER BY ASC
 SELECT * FROM `products` ORDER BY Price ASC;
-
-SELECT * FROM `customers` WHERE Country = 'Italy' AND City = 'Rome';
-
-SELECT CustomerName AS 'Lista klientów z Niemiec' FROM `customers` WHERE Country = 'Germany';
-SELECT MIN(BirthDate) AS 'Data urodzenia najstarszego pracownika' FROM employees;
 
 ORDER BY DESC
 SELECT * FROM `employees` ORDER BY BirthDate DESC;
+SELECT * FROM orderdetails ORDER BY quantityOrdered DESC;
 
 WHERE LIKE
 SELECT * FROM `employees` WHERE FirstName LIKE 'A%';
@@ -52,6 +50,7 @@ SELECT * FROM `customers` WHERE customerName LIKE 'A_E%';
 WHERE AND
 SELECT * FROM `products` WHERE NOT productLine = "ships" AND NOT productLine = "Planes";
 SELECT * FROM payments WHERE customerNumber = 141 AND amount > 10000;
+SELECT * FROM `customers` WHERE Country = 'Italy' AND City = 'Rome';
 
 WHERE NOT
 SELECT * FROM `products` WHERE NOT productLine = "ships" AND NOT productLine = "Planes";
