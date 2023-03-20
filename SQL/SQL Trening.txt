@@ -17,13 +17,18 @@ SELECT MIN(paymentDate), customerNumber,checkNumber,amount FROM `payments`;
 SELECT MIN(Price) FROM `products`;
 SELECT MIN(buyPrice) FROM `products`;
 
+SELECT MAX
 SELECT MAX(Price) FROM `products`;
 SELECT MAX(amount) AS 'Najwyższa płatność' FROM `payments`;
 
+SELECT COUNT
 SELECT COUNT(CustomerID) FROM `customers` WHERE Country = 'Mexico';
 SELECT customerNumber, COUNT(Amount), checkNumber, paymentDate FROM payments WHERE NOT amount < 10000 Group BY customerNumber ORDER BY COUNT(amount) DESC;
 SELECT COUNT(customerNumber), country FROM customers GROUP BY country ORDER BY COUNT(customerNumber) DESC;
+SELECT COUNT(productCode) FROM products WHERE productScale = '1:10'
 
+
+SELECT AVG
 SELECT AVG(Price) FROM `products` WHERE CategoryID = 1;
 SELECT AVG(amount) FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '2004-12-31'
 
@@ -84,6 +89,7 @@ SELECT Count(orderNumber), status FROM `orders` Where status = 'cancelled' OR st
 WHERE IS NOT NULL
 SELECT * FROM customers WHERE addressLine2 IS NOT NULL
 SELECT * FROM customers WHERE country = 'Australia' AND addressLine2 IS NOT NULL;
+SELECT * FROM orders WHERE comments IS NOT NULL;
 
 DELETE
 DELETE FROM `orders` WHERE OrderID = 10448
@@ -120,6 +126,9 @@ INSERT INTO offices VALUES(NULL, 'Wrocław', '733 053 505', 'Pl. Zgody', '9/13',
 
 DELETE
 DELETE FROM products WHERE productName = 'XXX'
+
+UNION / UNION ALL
+SELECT city FROM customers UNION SELECT city FROM  offices ORDER By city ASC;
 
 Błędy:
 

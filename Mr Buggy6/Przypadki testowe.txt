@@ -1,3 +1,18 @@
+Summary
+1. Test user’s password set up - 8 test cases
+2. Test the login and logout process from the system - 10 test cases
+3. Check edition of the “Profile” form - 18 test cases
+4. Check "New" and "Edit" functions on employee's tab - 21 test cases
+5. Verify validation for adding and editing clients records in the system -  12 test cases
+6. Verify validation for adding and editing services records in the system - 2 test cases
+7. Test the project's tab (assignment of the employee to a service and a client) including an export function - 6 test cases
+8. Use CRUD heuristic to test "Opportunities" - 16 test cases
+9. Verify correctness of the data in "Dashboard" table - 24 test cases
+10. Test the search options where available in the system - 35 test cases
+11. Test the filter options where available in the system - 8 Test cases
+Total : 160 test cases
+
+
 1. Test user’s password set up - Done 4 Defects
 X	1.1. Sprawdzenie czy nowe hasło nie zawierające znaku specjalnego zostanie zaakceptowane
 X	1.2. Sprawdzenie czy nowe hasło nie zawierające liczby zostanie zaakceptowane
