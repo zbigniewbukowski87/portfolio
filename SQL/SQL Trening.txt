@@ -130,6 +130,21 @@ DELETE FROM products WHERE productName = 'XXX'
 UNION / UNION ALL
 SELECT city FROM customers UNION SELECT city FROM  offices ORDER By city ASC;
 
+CREATE DATABASE
+CREATE DATABASE Testowa
+
+CREATE TABLE
+CREATE TABLE test_table (Number int PRIMARY KEY AUTO_INCREMENT, Name varchar(20), Last_name varchar(20), Birth_Date int);
+
+ALTER TABLE ADD
+ALTER TABLE test_table ADD Country Varchar(20)
+
+ALTER TABLE MODIFY COLUMN
+ALTER TABLE test_table MODIFY COLUMN Birth_Date int NOT NULL
+
+ALTER COLUM DROP COLUMN
+ALTER TABLE test_table DROP COLUMN Country
+
 Błędy:
 
 SELECT AVG(Price) FROM `products` WHERE CategoryID = 1 AS 'Średnia Cena napojów'
