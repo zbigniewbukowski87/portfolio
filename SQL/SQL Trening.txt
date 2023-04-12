@@ -90,6 +90,7 @@ WHERE IS NOT NULL
 SELECT * FROM customers WHERE addressLine2 IS NOT NULL
 SELECT * FROM customers WHERE country = 'Australia' AND addressLine2 IS NOT NULL;
 SELECT * FROM orders WHERE comments IS NOT NULL;
+SELECT * FROM `offices` WHERE state IS NOT NULL
 
 DELETE
 DELETE FROM `orders` WHERE OrderID = 10448
@@ -135,6 +136,9 @@ CREATE DATABASE Testowa
 
 CREATE TABLE
 CREATE TABLE test_table (Number int PRIMARY KEY AUTO_INCREMENT, Name varchar(20), Last_name varchar(20), Birth_Date int);
+
+DROP TABLE
+DROP TABLE test_table
 
 ALTER TABLE ADD
 ALTER TABLE test_table ADD Country Varchar(20)
