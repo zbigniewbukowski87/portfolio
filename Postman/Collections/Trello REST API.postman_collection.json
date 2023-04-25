@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "7b5ff008-18dd-4c8d-ac39-2b598012fce4",
+		"name": "Trello REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25110911"
+	},
+	"item": [
+		{
+			"name": "Add new board",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,6 @@
 SELECT DISTINCT
 SELECT DISTINCT productLine FROM `products` ORDER BY productLine ASC;
+SELECT DISTINCT country FROM `customers` ORDER BY country ASC;
 
 SELECT AS
 SELECT CustomerName AS 'Imię i nazwisko' , City AS 'Miasto'  FROM `customers`;
@@ -120,10 +121,12 @@ SELECT payments.amount , customers.customerName FROM payments LEFT JOIN customer
 RIGHT JOIN
 SELECT orders.OrderID, employees.LastName FROM orders RIGHT JOIN employees ON orders.EmployeeID = employees.EmployeeID ORDER BY LastName;
 SELECT orderdetails.productcode, orders.status FROM orderdetails RIGHT JOIN orders ON orderdetails.orderNumber = orders.orderNumber;
+SELECT orderdetails.ordernumber, orderdetails.quantityOrdered, products.buyPrice FROM orderdetails RIGHT JOIN products ON orderdetails.productCode = products.productCode;
 
 INSERT INTO
 INSERT INTO products VALUES ('s11' , 'XXX', 'Motorcycles' , '1:11' , 'x' , 'x', 'x', 'x', 'x' );
 INSERT INTO offices VALUES(NULL, 'Wrocław', '733 053 505', 'Pl. Zgody', '9/13', 'Dolnośląskie', 'Poland', '50-432', 'Europe') 
+INSERT INTO Projects VALUES(2, 'NewApp', 'BestApps', '1987-11-18') 
 
 DELETE
 DELETE FROM products WHERE productName = 'XXX'
@@ -136,6 +139,9 @@ CREATE DATABASE Testowa
 
 CREATE TABLE
 CREATE TABLE test_table (Number int PRIMARY KEY AUTO_INCREMENT, Name varchar(20), Last_name varchar(20), Birth_Date int);
+CREATE TABLE new_table (column1 int(20) AUTO_INCREMENT PRIMARY KEY, column2 varchar(20) NOT NULL);
+CREATE TABLE Table_22 (Id_Number int AUTO_INCREMENT PRIMARY KEY, FirstName varchar(20) , LastName Varchar (20), Country Varchar (20), Phone_number int (40) NOT NULL )
+CREATE TABLE Projects ( ProjectId int NOT NULL AUTO_INCREMENT PRIMARY KEY, Project_Name varchar(20), Customer varchar(20), RunDate date)
 
 DROP TABLE
 DROP TABLE test_table
