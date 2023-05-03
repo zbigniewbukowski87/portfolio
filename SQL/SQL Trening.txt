@@ -37,6 +37,7 @@ SELECT SUM
 SELECT SUM(Price) FROM products WHERE CategoryID = 2;
 SELECT SUM(Price) FROM `products` WHERE SupplierID = 2;
 SELECT SUM(amount) FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '2004-01-31'
+SELECT SUM(amount), customerNumber FROM payments GROUP BY customerNumber ORDER BY SUM(amount) ASC
 
 SELECT AVG
 SELECT AVG(Price) AS 'Średnia Cena napojów' FROM `products` WHERE CategoryID = 1;
