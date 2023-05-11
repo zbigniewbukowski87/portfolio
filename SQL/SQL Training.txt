@@ -21,6 +21,7 @@ SELECT MIN(buyPrice) FROM `products`;
 SELECT MAX
 SELECT MAX(Price) FROM `products`;
 SELECT MAX(amount) AS 'Najwyższa płatność' FROM `payments`;
+SELECT MAX(amount) FROM payments WHERE customerNumber = '112';
 
 SELECT COUNT
 SELECT COUNT(CustomerID) FROM `customers` WHERE Country = 'Mexico';
@@ -77,6 +78,8 @@ UPDATE
 UPDATE employees SET Photo = 'brzydkie zdjęcie.jpg', Notes = 'nasz wymarzony pracownik' WHERE EmployeeID = 11;
 UPDATE products SET productLine = 'Classic Cars' WHERE productCode = 'S10_1678'
 UPDATE employees SET jobTitle = 'VP Marketing' WHERE employeeNumber = 1056;
+UPDATE customers SET addressLine2 = 'Rue Royale' Where customerNumber = 103;
+UPDATE offices SET addressLine2 = 'Rue Morgue 1', state = 'Provance' WHERE officeCode = 4
 
 LIMIT
 SELECT * FROM `products` ORDER BY Price DESC LIMIT 3;

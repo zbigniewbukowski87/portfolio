@@ -1,0 +1,70 @@
+--> VERIFY STATUS CODE
+
+pm.test("should verify response status code", () => {
+pm.response.to.have.status(200);
+})
+
+pm.test("should verify response status code", () => {
+pm.expect(pm.response.code).to.eql(200)
+})
+
+--> VERIFY RESPONSE TIME
+
+pm.test("Should verify response time", () => {
+pm.expect(pm.response.responseTime).to.lessThan(120) 
+})
+
+--> VERIFY RESPONSE STATUS
+
+pm.test("should verify response status", () => {
+pm.expect(pm.response.status).to.eql("OK")
+})
+
+--> VERIFY POST ID
+
+pm.test("should verify post id", () => {
+const responseBody = pm.response.json();
+pm.expect(responseBody[0].id).to.be.eql(1);
+})
+
+pm.test("Checking udated post ID", () => {
+pm.expect(pm.response.json().id).to.be.eql(1)
+})
+
+--> VERIFY LENHT OF NAME
+
+pm.test('Verify lenght of name', () => {
+console.log(pm.response.json());
+pm.expect(pm.response.json()[0].title).to.have.lengthOf(74);
+})
+
+--> INCLUDE
+
+pm.test('Verify contain of body', () => {
+pm.expect(pm.response.json()[0].body).to.include("quia")
+})
+
+--> MAP
+
+pm.test('Verify correctness of email', () => {
+pm.response.json().map(data => {
+pm.expect(data.email).to.include("@")
+})})
+
+--> TO BE ONE OF
+
+pm.test("Verify status", () => {
+pm.expect(pm.response.code).to.be.oneOf([200, 201])
+})
+
+--> TO HAVE HEADER
+
+pm.test("Verify header", () => {
+pm.response.to.have.header("Server")
+})
+
+--> HEADER CONTENT CORRECTNESS
+
+pm.test("Header content correctness", () => {
+pm.expect(pm.response.headers.get("Server")).to.be.eql("cloudflare")
+})

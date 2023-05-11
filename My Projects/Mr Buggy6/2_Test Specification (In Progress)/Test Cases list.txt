@@ -1,0 +1,191 @@
+Summary
+1. Test user’s password set up - 8 test cases
+2. Test the login and logout process from the system - 10 test cases
+3. Check edition of the “Profile” form - 18 test cases
+4. Check "New" and "Edit" functions on employee's tab - 21 test cases
+5. Verify validation for adding and editing clients records in the system -  12 test cases
+6. Verify validation for adding and editing services records in the system - 2 test cases
+7. Test the project's tab (assignment of the employee to a service and a client) including an export function - 6 test cases
+8. Use CRUD heuristic to test "Opportunities" - 16 test cases
+9. Verify correctness of the data in "Dashboard" table - 24 test cases
+10. Test the search options where available in the system - 35 test cases
+11. Test the filter options where available in the system - 8 Test cases
+Total : 160 test cases
+
+
+1. Test user’s password set up - Done 4 Defects
+X	1.1. Sprawdzenie czy nowe hasło nie zawierające znaku specjalnego zostanie zaakceptowane
+X	1.2. Sprawdzenie czy nowe hasło nie zawierające liczby zostanie zaakceptowane
+X	1.3. Sprawdzenie czy nowe hasło krótsze niż 8 znaków zostanie zaakceptowane
+	1.4. Sprawdzenie czy nowe hasło krótsze dłuższe niż 20 znaków zostanie zaakceptowane
+	1.5. Sprawdzenie czy można zapisać nowe hasło bez potwierdzania go w polu Confirm password
+	1.6. Sprawdzenie czy można zapisać hasło jeżeli w polach Password i Confirm password znajdują się różne wartości
+	1.7. Sprawdzenie czy w polu password można wprowadzić więcej niż 20 znaków
+X	1.8. Sprawdzenie czy w polu Confirm password można wprowadzić więcej niż 20 znaków 
+2. Test the login and logout process from the system - Done 4 Defects
+	2.1. Sprawdzenie czy w polu Username funkcja ukrywania jest wyłączona - pass
+	2.2. Sprawdzenie czy w polu Password funkcja ukrywania jest włączona - pass
+	2.3. Sprawdzenie czy istnieje możliwość skopiowania hasła z pola Password -pass
+X	2.4. Sprawdzenie czy po wprowadzeniu wartości w polach Username i Password można zalogować się klikając przycisk enter
+X	2.5. Sprawdzenie czy pole Username rozróżnia duże i małe litery
+	2.6. Sprawdzenie czy pole Password uwzględnia duże i małe litery - pass
+	2.7. Sprawdzenie czy możliwe jest zalogowanie się do konta używając hasła które zostało wcześniej zmienione - pass
+X	2.8. Sprawdzenie czy po wprowadzeniu błędnej nazwy użytkownika walidacja działa prawidłowo
+X	2.9. Sprawdzenie czy po wprowadzenieu błędnego hasła walidacja działa prawidłowo
+	2.10. Sprawdzenie czy przy wpisywaniu hasła i włączonym przycisku Caps Lock aplikacja wyświetli komunikat - pass
+3. Check edition of the “Profile” form - Done 10 Defects 
+	3.1. Sprawdzenie czy po kliknięciu przycisku EDIT wyświetli się formularz edytowania profilu
+	3.2. Sprawdzenie czy można zaktualizować profil w którym jedno z obowiązkowych pól będzie puste - sprawdzenie po kolei każdego z pól
+	3.3. Sprawdzenie czy po zaktualizowaniu hasła można zalogować się na nowym haśle
+	3.4. Sprawdzenie czy po zaktualizowaniu hasła można zalogować się na starym haśle
+	3.5. Sprawdzenie czy po zapisaniu formularza i kliknięciu w przycisk EDIT na nowo otwartym formularzu wyświetlą się aktualne dane
+	3.6. Sprawdzenie czy jest możliwość zapisania formularza edycji gdzie pole Role zostaje puste
+	3.7. sprawdzenie czy po wprowadzeniu polskich znaków w formularzu edycji użytkownika wyświetlą się one prawidłowo w danych użytkownika
+	3.8. Sprawdzenie czy w polu email można wprowadzić adres email zawierający polskie znaki
+	3.9. Sprawdzenie możliwości wyboru każdej z dostępnych ról
+	3.10. Sprawdzenie czy w polu First Name można wprowadzić wrtość liczbową
+	3.11. Sprawdzenie czy w polu Last Name można wprowadzić wartość liczbową
+	3.12. Sprawdzenie czy w polu Phone number można wprowadzić wartość tekstową
+	3.13. Sprawdzenie ile znaków można wprowadzić w polach First Name i Last Name
+	3.14. Sprawdzenie ile znaków można wprowadzić w polu Phone Number
+	3.15. Sprawdzenie czy w polu Phone Number można wprowadzić znaki specjalne - + - ()
+	3.16. Sprawdzenie czy można uaktualnić adres email  wpisując adres zawierający spację
+	3.17. Sprawdzenie czy adres email może zawierać znaki specjalne
+X	3.18. Sprawdzenie czy w polu Username można wprowadzić nazwę zaczynającą się od dużej litery
+4. Check "New" and "Edit" functions on employee's tab - Done 7 Defects
+	4.1. Sprawdzenie czy po kliknięciu przyciku New pojawi się formularz wprowadzania nowego pracownika
+	4.2. Sprawdzenie czy można zapisać formularz dodawania nowego pracownika bez wypełnienia jednego z obowiązkowych pól
+	4.3. Sprawdzenie czy można wprowadzić nowego pracownika posiadającego ten sam Username który już istniej w bazie pracowników
+	4.4. Sprawdzenie czy w polu First name można wprowadzić wartość liczbową	
+	4.5. sprawdzenie ile znakó można wprowadzić w polu First name
+	4.6. Sprawdzenie czy po wprowadzeniu w polu Username istniejącej już nazwy użytkownika aplikacja wyświetli od razu komunikat że dane username już istnieje
+ 	4.7. Sprawdzenie czy przy wprowadzaniu nowego użytkownika po wprowadzeniu istniejącego już Username i próbie zapisu, po wprowadzeniu nie występującego w bazie Username komunikat o błędzie zniknie
+	4.8. Sprawdzenie Czy przy wprowadzaniu nowego pracownikaw polu Last name można wrowadzić wartość liczbową
+	4.9. Sprawdzenie czy przy wprowadzaniu nowego pracownikaw polu Username można wprowadzić nazwę uzytkownika zawierającą polskie znaki
+	4.10. Sprawdzenie czy przy wprowadzaniu nowego pracownikaw polu First name można wprowadzić nazwę zawierającą polskie znaki
+	4.11. Sprawdenie czy przy wprowadzaniu nowego pracownikaw polu Last name można wprowadzić nazwę zawierającą polskie znaki
+	4.12. Sprawdzenie czy przy wprowadzaniu nowego pracownika w polu Phone number można wprowadzić dane tekstowe
+	4.13. Sprawdzenie czy przy wprowadzaniu nowego pracownika w polu years of expirence można wprowadzić wartość tekstową
+	4.14. Sprawdzenie czy przy edytowaniu nowego pracownika przy zmianie danych w polu username i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.15. Sprawdzenie czy przy edytowaniu nowego pracownika przy zmianie danych w polu First name i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.16. Sprawdzenie czy przy edytowaniu nowego pracownika przy zmianie danych w polu Last Name i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.17. Sprawdzenie czy przy edytowaniu nowego pracownika przy zmianie danych w polu Phone number i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.18. Sprawdzenie czy przy edytowaniu nowego pracownika przy zmianie danych w polu Years of experience i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.19. Sprawdzenie czy przy edytowaniu nowego pracownika przy zmianie danych w polu Specialization / skills i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.20. Sprawdzenie czy przy edytowaniu nowego pracownika przy próbie zaznaczenia wszystkich 3 wariantów w polu Specialization / skills i zapisaniu wprowadzone zmiany zapiszą się poprawnie
+	4.21. Sprawdzenie czy przy wprowadzaniu nowego pracownika przy wpisaniu w polu Years of experience wartości wyższej niż malsymalna według komunikatu (100) aplikacja umożliwi zapis
+5. Verify validation for adding and editing clients records in the system - Done 6 Defects
+	5.1. Sprawdzenie czy przy próbie zapisu nowego klienta przy zostawieniu pustego obowiązkowego pola Name wyświetli się komunikat że pole jest obowiązkowe - pass
+	5.2. Sprawdzenie czy przy próbie zapisu nowego klienta przy zostawieniu pustego obowiązkowego pola Country wyświetli się komunikat że pole jest obowiązkowe - pass
+	5.3. Sprawdzenie czy przy próbie zapisu nowego klienta przy zostawieniu pustego obowiązkowego pola City wyświetli się komunikat że pole jest obowiązkowe - pass
+	5.4. Sprawdzenie czy przy próbie zapisu nowego klienta przy zostawieniu pustego obowiązkowego pola Post code wyświetli się komunikat że pole jest obowiązkowe - pass
+	5.5. Sprawdzenie czy przy próbie zapisu nowego klienta przy zostawieniu pustego obowiązkowego pola Street wyświetli się komunikat że pole jest obowiązkowe - pass
+	5.6. Sprawdzenie czy przy próbie zapisu nowego klienta przy zostawieniu pustego obowiązkowego pola Number wyświetli się komunikat że pole jest obowiązkowe - pass
+	5.7. Sprawdzenie czy przy próbie wprowadzenia wartości numerycznej w polu City pojawi się komunikat że należy wprowadzić wartość tekstową - fail
+	5.8. Sprawdzenie czy przy próbie wprowadzenia wartości tekstowej w polu Post code pojawi się komunikat że należy wprowadzić wartość liczbową - fail
+	5.9. Sprawdzenie czy przy próbie wprowadzenia w polu Street wartości liczbowej pojawi się komunikat że należy wprowadzić tekst - fail
+	5.10. Sprawdzenie czy przy próbie wprowadzenia w polu Number tekstu pojawi się komunikat że należy wprowadzic wartość liczbową - fail
+	5.11. Sprawdzenie czy przy próbie wprowadzenia w polu Phone number wartości tekstowej wyświetli się komunikat że należy wprowadzić wartość liczbową - fail
+	5.12. Sprawdzenie czy przy próbie wpisania w polu email adresu w niewłaściwym formacie wyświetli się komunikat jak powinien wyglądać prawidłowy adres email - fail
+6. Verify validation for adding and editing services records in the system - Done 0 Defects
+	6.1. Sprawdzenie czy przy próbe wprowadzenia usługi i wpisaniu w polu name istniejącej już nazwy pojawi się komunikat że usługa o tej samej nazwi już istnieje - pass
+	6.1. Sprawdzenie czy przy próbe edytowania usługi i wpisaniu w polu name istniejącej już nazwy pojawi się komunikat że usługa o tej samej nazwi już istnieje - pass
+7. Test the project's tab (assignment of the employee to a service and a client) including an export function - Done 4 Defects
+	7.1. Sprawdzenie czy podczas dodawania nowego projektu można w polu Service wprawadzić każdą z dostępnych usług - fail
+	7.2. Sprawdzenie czy do projektu można przypisać większą liczbę pracowników - próba na 12 pracownikach - pass
+	7.3. Sprawdzenie czy można poprawnie wyeksportować projekty do formatu JSON - fail
+	7.4. Sprawdzenie czy można poprawnie wyeksportować projekty do formatu XML - pass
+	7.5. Sprawdzenie czy w zakładce Services prawidłowo wyświetla się liczba pracowników przypisanych do danej usługi - fail
+	7.6. Sprawdzenie czy w danych rojektu pracownicy zostają przypisani prawidłowo - fail
+8. Use CRUD heuristic to test "Opportunities" - Done 3 Defects
+	8.1. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Name można wprowadzić nazwę zawierającą polskie znaki - pass
+	8.2. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Cost można wprowadzić wartość tekstowa - pass
+	8.3. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Margin można wprowadzić wartość tekstową - pass
+	8.4. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Client można wybrać z listy każdego z klientów - pass
+	8.5. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Start date można wybrać datę z przeszłości - pass
+	8.6. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Start date w kalendarzu wyświetlają się poprawne dane - pass
+	8.7. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Services można wybrać każdą z możliwych opcji - pass
+	8.8. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Description można wprowadzić test zawierający polskie znaki - pass
+	8.9. Sprawdzenie czy przy dodawaniu nowej Opportunity w polu Probability można wprowadzić wartość tekstową - pass
+X	8.10. Sprawdzenie czy przy dodawaniu nowej Opportunity przy spełnieniu opisywanych założeń discount naliczy się prawidłowo - fail
+	8.11. Sprawdzenie czy przy dodawaniu nowej Opportunity pole amount jest prawidłowo obliczane na podstawie pól Cost oraz Margin - pass
+X	8.12. Sprawdzenie czy przy dodawaniu nowej Opportunity pole amount jest prawidłowo obliczane na podstawie pól Cost oraz Margin przy wprowadzeniu w polu Margin wartości po przecinku - fail
+X	8.13. Sprawdzenie czy przy wyświetlaniu istniejącej Opportunity dane wyświetlają się poprawnie - fail
+	8.14. Sprawdzenie czy po dodaniu nowego klienta będzie można go wybrać dodając nowe opportunity - pass
+	8.15. Sprawdzenie czy po zedytowaniu opportunity i zapisaniu dane zapiszą się prawidłowo - pass
+	8.16. Sprawdzenie czy po kliknięciu przycisku delete rekord zostanie usunięty - pass
+9. Verify correctness of the data in "Dashboard" table - Done 2 Defects
+	9.1. Sprawdzenie czy pole Projects wyświetla prawidłowe dane - pass
+	9.2. Sprawdzenie czy pole Employees wyświetla prawidłowe dane - pass
+	9.3. Sprawdzenie czy pole Clients wyświetla prawidłowe dane - pass
+	9.4. Sprawdzenie czy pole Opportunities wyświetla prawidłowe dane - pass
+	9.5. Sprawdzenie czy pole New wyświetla prawidłowe dane - pass
+	9.6. Sprawdzenie czy pole In Progress wyświetla prawidłowe dane	- pass
+	9.7. Sprawdzenie czy pole Closed wyświetla prawidłowe dane - pass
+	9.8. Sprawdzenie czy pole New wyświetla prawidłowe dane
+	9.9. Sprawdzenie czy pole Solution proposed wyświetla prawidłowe dane
+	9.10. Sprawdzenie czy pole Negotiating wyświetla prawidłowe dane
+	9.11. Sprawdzenie czy pole Closed wyświetla prawidłowe dane
+	9.12. Sprawdzenie czy po wprowadzeniu zmian w polu Projects dane zostaną prawidłowo odświeżone - pass
+	9.13. Sprawdzenie czy po wprowadzeniu zmian w polu Employees dane zostaną prawidłowo odświeżone - pass
+	9.14. Sprawdzenie czy po wprowadzeniu zmian w polu Clients dane zostaną prawidłowo odświeżone - pass
+	9.15. Sprawdzenie czy po wprowadzeniu zmian w polu Opportunities dane zostaną prawidłowo odświeżone - pass
+	9.16. Sprawdzenie czy po wprowadzeniu zmian w polu New dane zostaną prawidłowo odświeżone - pass
+	9.17. Sprawdzenie czy po wprowadzeniu zmian w polu In Progress dane zostaną prawidłowo odświeżone - pass
+	9.18. Sprawdzenie czy po wprowadzeniu zmian w polu Closed dane zostaną prawidłowo odświeżone - pass
+	9.19. Sprawdzenie czy po wprowadzeniu zmian w polu New dane zostaną prawidłowo odświeżone
+	9.20. Sprawdzenie czy po wprowadzeniu zmian w polu Solution proposeddane zostaną prawidłowo odświeżone
+	9.21. Sprawdzenie czy po wprowadzeniu zmian w polu Negotiating dane zostaną prawidłowo odświeżone
+	9.22. Sprawdzenie czy po wprowadzeniu zmian w polu Closed dane zostaną prawidłowo odświeżone
+X	9.23. Sprawdzenie czy pola w tablicy Dashboard mają takie same nazwy jak ich odpowiedniki w danych sekcjach - fail
+X	9.24. Sprawdzenie czy w Dashboard znajdują się wszystkie statusy jakie można wybrać w danych sekcjach - fail
+10. Test the search options where available in the system - Done 10 Defects
+	10.1. Sprawdzeie czy wyszukiwarka w sekcji Opportunities prawidłowo wyszukuje wpisaną nazwę
+	10.2. Sprawdzeie czy wyszukiwarka w sekcji Opportunities umożliwia użycie polskich znaków
+X	10.3. Sprawdzeie czy wyszukiwarka w sekcji Opportunities Uwzględnia znaki specjalne
+	10.4. Sprawdzeie czy wyszukiwarka w sekcji Opportunities wyświetla rekordy które zostały wcześniej usunięte
+	10.5. Sprawdzeie czy wyszukiwarka w sekcji Opportunities ma możliwość wyświetlenia więcej niż jednego rekordu
+	10.6. Sprawdzeie czy wyszukiwarka w sekcji Opportunities po wykasowaniu wcześniej wyszukiwanej frazy prowidłowo wyświetli listę wszystkich rekordów
+	10.7. Sprawdzeie czy wyszukiwarka w sekcji Projects prawidłowo wyszukuje wpisaną nazwę
+	10.8. Sprawdzeie czy wyszukiwarka w sekcji Projects umożliwia użycie polskich znaków
+X	10.9. Sprawdzeie czy wyszukiwarka w sekcji Projects Uwzględnia znaki specjalne
+	10.10. Sprawdzeie czy wyszukiwarka w sekcji Projects wyświetla rekordy które zostały wcześniej usunięte
+	10.11. Sprawdzeie czy wyszukiwarka w sekcji Projects ma możliwość wyświetlenia więcej niż jednego rekordu
+	10.12. Sprawdzeie czy wyszukiwarka w sekcji Projects po wykasowaniu wcześniej wyszukiwanej frazy prowidłowo wyświetli listę wszystkich rekordów
+	10.13. Sprawdzeie czy wyszukiwarka w sekcji Employees prawidłowo wyszukuje wpisaną nazwę
+	10.14. Sprawdzeie czy wyszukiwarka w sekcji Employees umożliwia użycie polskich znaków
+X	10.15. Sprawdzeie czy wyszukiwarka w sekcji Employees Uwzględnia znaki specjalne
+	10.16. Sprawdzeie czy wyszukiwarka w sekcji Employees wyświetla rekordy które zostały wcześniej usunięte
+	10.17. Sprawdzeie czy wyszukiwarka w sekcji Employees ma możliwość wyświetlenia więcej niż jednego rekordu
+	10.18. Sprawdzeie czy wyszukiwarka w sekcji Employees po wykasowaniu wcześniej wyszukiwanej frazy prowidłowo wyświetli listę wszystkich rekordów
+	10.19. Sprawdzeie czy wyszukiwarka w sekcji Clients prawidłowo wyszukuje wpisaną nazwę
+	10.20. Sprawdzeie czy wyszukiwarka w sekcji Clients umożliwia użycie polskich znaków
+X	10.21. Sprawdzeie czy wyszukiwarka w sekcji Clients Uwzględnia znaki specjalne
+	10.22. Sprawdzeie czy wyszukiwarka w sekcji Clients wyświetla rekordy które zostały wcześniej usunięte
+	10.23. Sprawdzeie czy wyszukiwarka w sekcji Clients ma możliwość wyświetlenia więcej niż jednego rekordu
+	10.24. Sprawdzeie czy wyszukiwarka w sekcji Clients po wykasowaniu wcześniej wyszukiwanej frazy prowidłowo wyświetli listę wszystkich rekordów
+	10.25. Sprawdzeie czy wyszukiwarka w sekcji Services prawidłowo wyszukuje wpisaną nazwę
+	10.26. Sprawdzeie czy wyszukiwarka w sekcji Services umożliwia użycie polskich znaków
+X	10.27. Sprawdzeie czy wyszukiwarka w sekcji Services Uwzględnia znaki specjalne
+	10.28. Sprawdzeie czy wyszukiwarka w sekcji Services wyświetla rekordy które zostały wcześniej usunięte
+	10.29. Sprawdzeie czy wyszukiwarka w sekcji Services ma możliwość wyświetlenia więcej niż jednego rekordu
+	10.30. Sprawdzeie czy wyszukiwarka w sekcji Services po wykasowaniu wcześniej wyszukiwanej frazy prowidłowo wyświetli listę wszystkich rekordów
+X	10.31. Sprawdzenie czy wyszukiwarka w sekcji Opportunities wymaga użycia odpowiedniej wielkości litery przy wyszukiwaniu danej frazy
+X	10.32. Sprawdzenie czy wyszukiwarka w sekcji Projects wymaga użycia odpowiedniej wielkości litery przy wyszukiwaniu danej frazy
+X	10.33. Sprawdzenie czy wyszukiwarka w sekcji Employees wymaga użycia odpowiedniej wielkości litery przy wyszukiwaniu danej frazy
+X	10.34. Sprawdzenie czy wyszukiwarka w sekcji Clients wymaga użycia odpowiedniej wielkości litery przy wyszukiwaniu danej frazy
+X	10.35. Sprawdzenie czy wyszukiwarka w sekcji Services wymaga użycia odpowiedniej wielkości litery przy wyszukiwaniu danej frazy
+11. Test the filter options where available in the system - Done 2 defects
+X	11.1. Sprawdzenie czy filtrowanie w sekcji Opportunities po Clients działała prawidłowo przy każdym z wariantów wyboru
+	11.2. Sprawdzenie czy filtrowanie w sekcji Opportunities po Stages działała prawidłowo przy każdym z wariantów wyboru
+	11.3. Sprawdzenie czy filtrowanie w sekcji Opportunities po liczbie działała prawidłowo przy każdym z wariantów wyboru
+	11.4. Sprawdzenie czy filtrowanie w sekcji Projects po Clients działała prawidłowo przy każdym z wariantów wyboru
+	11.5. Sprawdzenie czy filtrowanie w sekcji Projects po Services działała prawidłowo przy każdym z wariantów wyboru
+	11.6. Sprawdzenie czy filtrowanie w sekcji Projects po Statuses działała prawidłowo przy każdym z wariantów wyboru
+	11.7. Sprawdzenie czy w sekcji Opportunities jest możliwość użycia więcej niż tylko jednego filtra
+X	11.8. Sprawdzenie czy w sekcji Projects istnieje możliwość użycia więcej niż tylko jednego filtra
+
+X. błędy znalezione poza zadanymi scenariuszami - 1 Defects
+	X.1. Podczas edytowania projektu przy wyborze w polu Services nie wszystkie usługi są wybieralne - fail
+
+

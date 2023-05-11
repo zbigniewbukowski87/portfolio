@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Mr. Buggy 6 - 2. Login and logout process from the system</title>
+<link type="text/css" rel="stylesheet" href="http://127.0.0.1/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width=231 height=56 src="http://127.0.0.1/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Mr. Buggy 6<br/>Test Suite: Mr. Buggy 6 - 2. Login and logout process from the system</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 05/09/2023</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.2. Login and logout process from the system</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc111">B6-20: 2.1. Checking if hiding function in field 'Username' is disabled</a></p><p style="padding-left: 45px;"><a href="#toc_tc113">B6-21: 2.2. Checking if hiding function in field 'Password' is enabled</a></p><p style="padding-left: 45px;"><a href="#toc_tc115">B6-22: 2.3. Checking if copying of contain of field 'Password' is enabled</a></p><p style="padding-left: 45px;"><a href="#toc_tc117">B6-23: 2.4. Checking if loging in by pressing Enter key is possible</a></p><p style="padding-left: 45px;"><a href="#toc_tc119">B6-24: 2.5. Checking if field 'Username' is case sensitive</a></p><p style="padding-left: 45px;"><a href="#toc_tc121">B6-25: 2.6. Checking if field 'Password' is case sensitive</a></p><p style="padding-left: 45px;"><a href="#toc_tc123">B6-26: 2.7. Checking if it is possible to log in with old password</a></p><p style="padding-left: 45px;"><a href="#toc_tc125">B6-27: 2.8. Checking if validation text is correct after entering incorrect username</a></p><p style="padding-left: 45px;"><a href="#toc_tc127">B6-28: 2.9. Checking if validation text is correct after entering incorrect password</a></p><p style="padding-left: 45px;"><a href="#toc_tc129">B6-29: 2.10. Checking if application inform that Caps Lock key is on during logging in</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Testing of application Mr. Buggy 6 according to guidelines of its developers.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : 2. Login and logout process from the system</h1>
+<a name="toc_tc111"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-20: 2.1. Checking if hiding function in field 'Username' is disabled&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check&nbsp;if hiding function in field &#39;Username&#39; is disabled</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Hiding function should be disabled in field &#39;Username&#39;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy 6</p>
+</td><td><p>Application should start properly and show log in box</p>
+</td></tr><tr><td width="5">2</td><td><p>Type random data in field &#39;Username&#39;</p>
+</td><td><p>Typed signs should be visible - hiding function should be disabled</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc113"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-21: 2.2. Checking if hiding function in field 'Password' is enabled&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if hiding function in field &#39;Password&#39; is enabled</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Hiding function should be enabled in field &#39;Password&#39;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy 6</p>
+</td><td><p>Application should start properly and show log in box</p>
+</td></tr><tr><td width="5">2</td><td><p>Type random data in field &#39;Password&#39;</p>
+</td><td><p>Typed signs should be not visible - hiding function should be enabled</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br />Security<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc115"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-22: 2.3. Checking if copying of contain of field 'Password' is enabled&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to checkif it is possible to copy the contain of field &#39;Password&#39;.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to copy the contain of field &#39;Password&#39;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy 6</p>
+</td><td><p>Application should start properly and show log in box</p>
+</td></tr><tr><td width="5">2</td><td><p>Type random data in field &#39;Password&#39;</p>
+</td><td><p>typed signs should be not visible - hiding function should be enabled</p>
+</td></tr><tr><td width="5">3</td><td><p>Mark the data typed in field &#39;Password&#39;</p>
+</td><td><p>Data should be marked</p>
+</td></tr><tr><td width="5">4</td><td><p>Press combination of keys ctrl + c</p>
+</td><td><p>Marked data should not by copied</p>
+</td></tr><tr><td width="5">5</td><td><p>Open Notepad and press combination ctrl + v</p>
+</td><td><p>Data typed in field &#39;Password&#39; should not appear</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br />Security<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc117"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-23: 2.4. Checking if loging in by pressing Enter key is possible&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is create in order to check if it is possible to log in by pressing enter key.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After entering the data in fields &quot;Username&#39; and &#39;Password&#39; it should be possible to log in by pressing enter key.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy 6</p>
+</td><td><p>Application should start properly and show log in box</p>
+</td></tr><tr><td width="5">2</td><td><p>Type random data in fields &#39;Username&#39; and &#39;Password&#39;</p>
+</td><td><p>Both fields should be filled in</p>
+</td></tr><tr><td width="5">3</td><td><p>Press enter key</p>
+</td><td><p>Try of logging in should be completed (successfull nor failed)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc119"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-24: 2.5. Checking if field 'Username' is case sensitive&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case was created to check&nbsp;if field &#39;Username&#39; is case sensitive.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Field &#39;Username&#39; should be case sensitive.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy 6 for the first time or reset data</p>
+</td><td><p>Application should run properly. There should appear the window of creating new user</p>
+</td></tr><tr><td width="5">2</td><td><p>Create new user which name start with lower case</p>
+</td><td><p>New user should be created correctly. There should appear the window of logging in.</p>
+</td></tr><tr><td width="5">3</td><td><p>Type before saves user name and start with upper case. Try to log in.</p>
+</td><td><p>User should be not logged in. There should appear validation text with information that usermane is not correct.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc121"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-25: 2.6. Checking if field 'Password' is case sensitive&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is&nbsp;create in order to check if field &#39;Password&#39; is case sensitive.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>&nbsp;Field &#39;Password&#39; should be&nbsp;case sensitive.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy 6 for the first time or reset data</p>
+</td><td><p>Application should run properly. There should appear the window of creating new user</p>
+</td></tr><tr><td width="5">2</td><td><p>Create new user with password started by lower case</p>
+</td><td><p>New user should be created correctly. There should appear the window of logging in.</p>
+</td></tr><tr><td width="5">3</td><td><p>Type before saves user name and password. Type in password starded by upper case. Try to log in.</p>
+</td><td><p>User should be not logged in. There should appear validation text with information that password is not correct.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc123"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-26: 2.7. Checking if it is possible to log in with old password&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case was created in order to test if application&nbsp;allow user to log in with password which was previous changed.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to log in with password which was previous changed.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly.</p>
+</td></tr><tr><td width="5">2</td><td><p>Log in to user account</p>
+</td><td><p>User should be logged in successfuly</p>
+</td></tr><tr><td width="5">3</td><td><p>Edit user profile and change the password for the new one</p>
+</td><td><p>Password should be changed successfully</p>
+</td></tr><tr><td width="5">4</td><td><p>Log out from user account</p>
+</td><td><p>User should be logged out successfully</p>
+</td></tr><tr><td width="5">5</td><td><p>Try to log in on users account with the old password</p>
+</td><td><p>Logging in with old password should be not possible</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br />Security<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc125"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-27: 2.8. Checking if validation text is correct after entering incorrect username&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if&nbsp;validation text which appear after entering incorrect username is correct&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After entering incorrect username there should appear validation text with information that username is not correct</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Run the application Mr. Buggy</p>
+</td></tr><tr><td width="5">2</td><td><p>Try to log in by entering incorrect username</p>
+</td><td><p>There should appear validation text with information that username is not correct</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc127"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-28: 2.9. Checking if validation text is correct after entering incorrect password&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if validation text which appear after entering incorrect password is correct</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After entering incorrect password there should appear validation text with information that password is not correct</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Try to log in by entering incorrect password</p>
+</td><td><p>There should appear validation text with information that password is not correct</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc129"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-29: 2.10. Checking if application inform that Caps Lock key is on during logging in&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if&nbsp;there will appear the information text that Caps Lock is on after switching it on during logging in</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After switching on the Caps Lock key during logging in there should appear information that Caps Lock is on</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Switch on Caps Lock during logging in</p>
+</td><td><p>There should appear text with inforation that Cops Lock is on</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Log in<br /></td></tr>
+</table>
+</div>
+
+</body>
+</html>

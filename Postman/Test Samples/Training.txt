@@ -1,0 +1,8 @@
+CONSOLE LOG
+console.log(pm.response.json());
+
+CHECK METHOD
+
+pm.test("Check Method", () => {
+pm.expect(pm.response.json().method).to.be.eql("DELETE")
+})

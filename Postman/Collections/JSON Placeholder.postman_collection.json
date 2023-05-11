@@ -8,9 +8,52 @@
 	"item": [
 		{
 			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"should verify response status code\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response status code\", () => {\r",
+							"pm.expect(pm.response.code).to.eql(200)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Should verify response time\", () => {\r",
+							"    //console.log(pm.response)\r",
+							"    pm.expect(pm.response.responseTime).to.lessThan(120) \r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response status\", () => {\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify post id\", () => {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody[0].id).to.be.eql(1);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
 			},
 			"response": []
 		},
@@ -135,13 +178,13 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Post new post + collection variable",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\r\n    \"userId\": 10,\r\n    \"id\": 101,\r\n    \"title\": \"mój testowy post\",\r\n    \"body\": \"bla bla bla\"\r\n  }"
+					"raw": " {\r\n    \"userId\": \"{{Test_user}}\",\r\n    \"id\": \"{{Test_user}}\",\r\n    \"title\": \"{{Post_title}}\",\r\n    \"body\": \"bla bla bla\"\r\n  }"
 				},
 				"url": {
 					"raw": "https://jsonplaceholder.typicode.com/posts",
@@ -280,6 +323,120 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "tryout",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Post new post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"userId\": 12,\r\n    \"id\": 101,\r\n    \"title\": \"another boring post\",\r\n    \"body\": \"another boring post\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update post body",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(responseBody)\r",
+							"\r",
+							"pm.test(\"Checking udated post ID\", () => {\r",
+							"    pm.expect(pm.response.json().id).to.be.eql(1)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"body\": \"updated body\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Post_title",
+			"value": "my first post (Collection)",
+			"type": "string"
+		},
+		{
+			"key": "Test_user",
+			"value": "10",
+			"type": "string"
 		}
 	]
 }
