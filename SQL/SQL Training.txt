@@ -126,6 +126,7 @@ RIGHT JOIN
 SELECT orders.OrderID, employees.LastName FROM orders RIGHT JOIN employees ON orders.EmployeeID = employees.EmployeeID ORDER BY LastName;
 SELECT orderdetails.productcode, orders.status FROM orderdetails RIGHT JOIN orders ON orderdetails.orderNumber = orders.orderNumber;
 SELECT orderdetails.ordernumber, orderdetails.quantityOrdered, products.buyPrice FROM orderdetails RIGHT JOIN products ON orderdetails.productCode = products.productCode;
+SELECT categories.CategoryName, products.ProductName FROM categories RIGHT JOIN products ON categories.CategoryID = products.CategoryID ORDER BY Categories.CategoryName ASC
 
 INSERT INTO
 INSERT INTO products VALUES ('s11' , 'XXX', 'Motorcycles' , '1:11' , 'x' , 'x', 'x', 'x', 'x' );

@@ -68,3 +68,15 @@ pm.response.to.have.header("Server")
 pm.test("Header content correctness", () => {
 pm.expect(pm.response.headers.get("Server")).to.be.eql("cloudflare")
 })
+
+--> GET COLLECTION VARIABLE CONTENT
+
+pm.test("Collection Variable content", () => {
+console.log(pm.collectionVariables.get("Post_title"))
+})
+
+--> CHECK CORRECTNESS OF COLLECTION VARIABLE
+
+pm.test("Collection Variable content", () => {
+pm.expect(pm.response.json().title).to.be.eql(pm.collectionVariables.get("Post_title"))
+})

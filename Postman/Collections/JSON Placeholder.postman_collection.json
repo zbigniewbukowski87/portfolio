@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "Get posts",
 			"event": [
 				{
 					"listen": "test",
@@ -74,10 +74,56 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Get Comments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response.json())\r",
+							"\r",
+							"pm.test('Verify correctness of email', () => {\r",
+							"pm.response.json().map(data => {\r",
+							"pm.expect(data.email).to.include(\"@\")\r",
+							"})})\r",
+							"\r",
+							"pm.test(\"Verify status\", () => {\r",
+							"pm.expect(pm.response.code).to.be.oneOf([200, 201])\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify header\", () => {\r",
+							"pm.response.to.have.header(\"Server\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Header content correctness\", () => {\r",
+							"pm.expect(pm.response.headers.get(\"Server\")).to.be.eql(\"cloudflare\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/comments?postId=86",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"comments"
+					],
+					"query": [
+						{
+							"key": "postId",
+							"value": "86"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -334,12 +380,26 @@
 		},
 		{
 			"name": "Post new post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Collection Variable content\", () => {\r",
+							"console.log(pm.collectionVariables.get(\"Post_title\"))\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "  {\r\n    \"userId\": 12,\r\n    \"id\": 101,\r\n    \"title\": \"another boring post\",\r\n    \"body\": \"another boring post\"\r\n  }",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"id\": 102,\r\n    \"title\": \"{{Post_title}}\",\r\n    \"body\": \"another boring post\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"

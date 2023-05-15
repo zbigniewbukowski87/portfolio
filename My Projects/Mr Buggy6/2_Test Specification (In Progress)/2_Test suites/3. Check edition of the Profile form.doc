@@ -12,7 +12,7 @@
 <p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width=231 height=56 src="http://127.0.0.1/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
 <div class="doc_title"><p>Test Specification</p></div>
 <div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Mr. Buggy 6<br/>Test Suite: Mr. Buggy 6 - 3. Check edition of the “Profile” form</p></div>
-<div class="summary"><p id="printedby">Printed by TestLink on 05/11/2023</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 05/15/2023</p></div>
 <div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
 <h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.3. Check edition of the “Profile” form</a></b></p>
 <p style="padding-left: 45px;"><a href="#toc_tc164">B6-30: 3.1. Checking if after clicking 'Edit' profile edit form will appear</a></p><p style="padding-left: 45px;"><a href="#toc_tc166">B6-31: 3.2. Checking if it is possible to update a profile if one of mandatory fields is empty</a></p><p style="padding-left: 45px;"><a href="#toc_tc168">B6-32: 3.3. Checking if after updating the password it is possilbe to log in with new password</a></p><p style="padding-left: 45px;"><a href="#toc_tc170">B6-33: 3.4. Checking if after updating the password it is possilbe to log in with old password</a></p><p style="padding-left: 45px;"><a href="#toc_tc172">B6-34: 3.5. Checking if after updating the profile and click 'Edit' there will appear updated data in form</a></p><p style="padding-left: 45px;"><a href="#toc_tc174">B6-35: 3.6. Checking if it is possible to save edit form where field Role is empty</a></p><p style="padding-left: 45px;"><a href="#toc_tc176">B6-36: 3.7. Checking if polish signs will be visible in updated data</a></p><p style="padding-left: 45px;"><a href="#toc_tc178">B6-37: 3.8. Checking if it is possilble to update an email adres which contains polish signs</a></p><p style="padding-left: 45px;"><a href="#toc_tc180">B6-38: 3.9. Checking if it is possible to sellect each role</a></p><p style="padding-left: 45px;"><a href="#toc_tc182">B6-39: 3.10. Checking if it is possible to enter numbers in field 'First name'</a></p><p style="padding-left: 45px;"><a href="#toc_tc184">B6-40: 3.11. Checking if it is possible to enter numbers in field 'Last name'</a></p><p style="padding-left: 45px;"><a href="#toc_tc186">B6-41: 3.12. Checking if it is possible to enter letters in field 'Phone number'</a></p><p style="padding-left: 45px;"><a href="#toc_tc188">B6-42: 3.13. Checking how many signs can be entered in fields &quot;First name' and 'Last name'</a></p><p style="padding-left: 45px;"><a href="#toc_tc190">B6-43: 3.14. Checking how many signs can be entered in field &quot;Phone number''</a></p><p style="padding-left: 45px;"><a href="#toc_tc192">B6-44: 3.15. Checking if it is possible to enter special signs in field 'Phone number'</a></p><p style="padding-left: 45px;"><a href="#toc_tc194">B6-45: 3.16. Checking if it is possible to update email adres with new adres which contains space</a></p><p style="padding-left: 45px;"><a href="#toc_tc196">B6-46: 3.17. Checking if it is possilbe to update email adress for new one which contains special signs</a></p><p style="padding-left: 45px;"><a href="#toc_tc198">B6-47: 3.18. Checking if it is possible to update Username for new one which start from big sign</a></p></div><h1 class="doclevel" >Scope</h1>
@@ -232,11 +232,24 @@
 </div>
 <a name="toc_tc182"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-39: 3.10. Checking if it is possible to enter numbers in field 'First name'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to udate profile if field &quot;first name&quot; contain the numbers.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to udate profile if field &quot;first name&quot; contain the numbers.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Type in field &quot;First name&quot; the data which contain the number and try to seve updated profile</p>
+</td><td><p>Application should not allow to udate profile if field &quot;First name&quot; contain the numbers. There should appear validation text with information that field &quot;First name&quot; should not contain the number</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
 <tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
-<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
 </table>
 </div>
 <a name="toc_tc184"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-40: 3.11. Checking if it is possible to enter numbers in field 'Last name'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
