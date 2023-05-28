@@ -1,0 +1,176 @@
+{
+	"id": "bfb4189a-6b64-4ccc-80af-577dc97973d8",
+	"name": "JSON Placeholder",
+	"timestamp": "2023-05-25T20:58:59.483Z",
+	"collection_id": "25110911-87d8fc82-e8ee-49c2-842b-9292eda1be65",
+	"folder_id": 0,
+	"environment_id": "25110911-f24fcfa6-d664-423e-8d33-43ab581b492c",
+	"totalPass": 22,
+	"delay": "2000",
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-05-25T20:58:45.587Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "c3716553-a2d1-4d4a-8a68-ff0a316045e0",
+			"name": "Get all posts",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"should verify response status code": true,
+				"Should verify response time": true,
+				"should verify response status": true,
+				"should verify post id": true,
+				"Verify lenght of name": true,
+				"Verify contain of body": true
+			},
+			"testPassFailCounts": {
+				"should verify response status code": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Should verify response time": {
+					"pass": 2,
+					"fail": 0
+				},
+				"should verify response status": {
+					"pass": 2,
+					"fail": 0
+				},
+				"should verify post id": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verify lenght of name": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Verify contain of body": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				92,
+				69
+			],
+			"allTests": [
+				{
+					"should verify response status code": true,
+					"Should verify response time": true,
+					"should verify response status": true,
+					"should verify post id": true,
+					"Verify lenght of name": true,
+					"Verify contain of body": true
+				},
+				{
+					"should verify response status code": true,
+					"Should verify response time": true,
+					"should verify response status": true,
+					"should verify post id": true,
+					"Verify lenght of name": true,
+					"Verify contain of body": true
+				}
+			]
+		},
+		{
+			"id": "a8ffa43b-c9b2-417a-af70-623a67cf164b",
+			"name": "Get post 86",
+			"url": "https://jsonplaceholder.typicode.com/posts/86",
+			"time": 59,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check user id": true,
+				"check lenght of title": true
+			},
+			"testPassFailCounts": {
+				"Check user id": {
+					"pass": 2,
+					"fail": 0
+				},
+				"check lenght of title": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				80,
+				59
+			],
+			"allTests": [
+				{
+					"Check user id": true,
+					"check lenght of title": true
+				},
+				{
+					"Check user id": true,
+					"check lenght of title": true
+				}
+			]
+		},
+		{
+			"id": "53b26fa9-d69d-4272-bcff-50f73ee3de59",
+			"name": "Get comments of post 86",
+			"url": "https://jsonplaceholder.typicode.com/posts/86/comments",
+			"time": 56,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check id of third comment": true,
+				"verify contain of header X-Ratelimit-Remaining": true
+			},
+			"testPassFailCounts": {
+				"check id of third comment": {
+					"pass": 2,
+					"fail": 0
+				},
+				"verify contain of header X-Ratelimit-Remaining": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				83,
+				56
+			],
+			"allTests": [
+				{
+					"check id of third comment": true,
+					"verify contain of header X-Ratelimit-Remaining": true
+				},
+				{
+					"check id of third comment": true,
+					"verify contain of header X-Ratelimit-Remaining": true
+				}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 439,
+	"collection": {
+		"requests": [
+			{
+				"id": "c3716553-a2d1-4d4a-8a68-ff0a316045e0",
+				"method": "GET"
+			},
+			{
+				"id": "a8ffa43b-c9b2-417a-af70-623a67cf164b",
+				"method": "GET"
+			},
+			{
+				"id": "53b26fa9-d69d-4272-bcff-50f73ee3de59",
+				"method": "GET"
+			}
+		]
+	}
+}

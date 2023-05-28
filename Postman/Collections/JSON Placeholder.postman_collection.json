@@ -465,6 +465,49 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Post new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check Response Body\", () => {\r",
+							"    //console.log(pm.response.json())\r",
+							"})\r",
+							"\r",
+							"pm.test(\"check email adress\", () => {\r",
+							"    pm.expect(pm.response.json().email).to.be.eql(\"Sincere@april.biz\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 12,\r\n    \"name\": \"Leanne Graham\",\r\n    \"username\": \"Bret\",\r\n    \"email\": \"Sincere@april.biz\",\r\n    \"address\": {\r\n      \"street\": \"Kulas Light\",\r\n      \"suite\": \"Apt. 556\",\r\n      \"city\": \"Gwenborough\",\r\n      \"zipcode\": \"92998-3874\",\r\n      \"geo\": {\r\n        \"lat\": \"-37.3159\",\r\n        \"lng\": \"81.1496\"\r\n      }\r\n    },\r\n    \"phone\": \"1-770-736-8031 x56442\",\r\n    \"website\": \"hildegard.org\",\r\n    \"company\": {\r\n      \"name\": \"Romaguera-Crona\",\r\n      \"catchPhrase\": \"Multi-layered client-server neural-net\",\r\n      \"bs\": \"harness real-time e-markets\"\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/users",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -496,6 +539,15 @@
 		{
 			"key": "Test_user",
 			"value": "10",
+			"type": "string"
+		},
+		{
+			"key": "UserID",
+			"value": ""
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://jsonplaceholder.typicode.com",
 			"type": "string"
 		}
 	]

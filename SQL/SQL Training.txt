@@ -22,6 +22,7 @@ SELECT MAX
 SELECT MAX(Price) FROM `products`;
 SELECT MAX(amount) AS 'Najwyższa płatność' FROM `payments`;
 SELECT MAX(amount) FROM payments WHERE customerNumber = '112';
+SELECT MAX(priceEach) FROM orderdetails
 
 SELECT COUNT
 SELECT COUNT(CustomerID) FROM `customers` WHERE Country = 'Mexico';
@@ -121,6 +122,7 @@ LEFT JOIN
 SELECT orders.OrderID, employees.LastName FROM orders LEFT JOIN employees ON orders.EmployeeID = employees.EmployeeID ORDER BY LastName;
 SELECT products.productname, productlines.textDescription FROM products LEFT JOIN productlines ON products.productLine = productlines.productLine;
 SELECT payments.amount , customers.customerName FROM payments LEFT JOIN customers ON payments.customerNumber = customers.customerName;
+SELECT orderdetails.orderNumber, orders.comments FROM orderdetails LEFT JOIN orders ON orderdetails.ordernumber = orders.orderNumber;
 
 RIGHT JOIN
 SELECT orders.OrderID, employees.LastName FROM orders RIGHT JOIN employees ON orders.EmployeeID = employees.EmployeeID ORDER BY LastName;
@@ -135,6 +137,7 @@ INSERT INTO Projects VALUES(2, 'NewApp', 'BestApps', '1987-11-18')
 
 DELETE
 DELETE FROM products WHERE productName = 'XXX'
+DELETE FROM offices WHERE officeCode = 8
 
 UNION / UNION ALL
 SELECT city FROM customers UNION SELECT city FROM  offices ORDER By city ASC;

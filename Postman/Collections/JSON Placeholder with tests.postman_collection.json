@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "f4870f98-858a-421a-8b36-13792b46f2fb",
+		"name": "JSON Placeholder with tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25110911"
+	},
+	"item": [
+		{
+			"name": "Get all posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"should verify response status code\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response status code\", () => {\r",
+							"pm.expect(pm.response.code).to.eql(200)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Should verify response time\", () => {\r",
+							"    //console.log(pm.response)\r",
+							"    pm.expect(pm.response.responseTime).to.lessThan(2000) \r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response status\", () => {\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify post id\", () => {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody[0].id).to.be.eql(1);\r",
+							"})\r",
+							"\r",
+							"pm.test('Verify lenght of name', () => {\r",
+							"    console.log(pm.response.json());\r",
+							"    pm.expect(pm.response.json()[0].title).to.have.lengthOf(74);\r",
+							"})\r",
+							"\r",
+							"pm.test('Verify contain of body', () => {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody[0].body).to.include(\"quia\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post 86",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check user id\", () => {\r",
+							"pm.expect(pm.response.json().userId).to.be.eql(9)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"check lenght of title\", () => {\r",
+							"pm.expect(pm.response.json().title).to.have.lengthOf(26)\r",
+							"})\r",
+							"console.log(pm.response.json())"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/86",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get comments of post 86",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check id of third comment\", () => {\r",
+							"    pm.expect(pm.response.json()[2].id).to.be.eql(428)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"verify contain of header X-Ratelimit-Remaining\", () => {\r",
+							"pm.expect(pm.response.headers.get(\"X-Ratelimit-Remaining\")).to.eql(\"998\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/86/comments",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"86",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response.json())\r",
+							"\r",
+							"pm.test(\"verify UserID\", () => {\r",
+							"pm.expect(pm.response.json().userId).to.be.greaterThan(0)\r",
+							"pm.expect(pm.response.json().userId).to.be.lessThan(2)     \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"id\": 101,\r\n    \"title\": \"test post\",\r\n    \"body\": \"test post with automatic tests\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/posts",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Post_title",
+			"value": "my first post (Collection)",
+			"type": "string"
+		},
+		{
+			"key": "Test_user",
+			"value": "10",
+			"type": "string"
+		},
+		{
+			"key": "UserID",
+			"value": ""
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://jsonplaceholder.typicode.com",
+			"type": "string"
+		}
+	]
+}

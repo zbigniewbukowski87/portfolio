@@ -1,0 +1,8 @@
+--> RANDOM NUMBER GENERATOR
+
+function numberGenerator() {
+    const randomNumbers = Math.floor(Math.random() * (10000000 - 1)+ 1 );
+    console.log(randomNumbers)
+}
+
+numberGenerator();

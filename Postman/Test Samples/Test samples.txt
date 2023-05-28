@@ -80,3 +80,28 @@ console.log(pm.collectionVariables.get("Post_title"))
 pm.test("Collection Variable content", () => {
 pm.expect(pm.response.json().title).to.be.eql(pm.collectionVariables.get("Post_title"))
 })
+
+--> CHECK CORECTNESS OF ENVIROMENT VARIABLE
+
+pm.test("Enviroment", () => {
+console.log(pm.environment.get("UserName"))
+pm.expect(pm.response.json().body).to.be.eql(pm.environment.get("UserName"))
+})
+
+--> SETTING THE VARIABLES
+
+pm.globals.set("Username", "Zbigniew")
+pm.collectionVariables.set("UserID", 001)
+pm.environment.set("PostNumber", "226")
+
+--> UNSETTING VARIABLES
+
+pm.globals.unset("VariableName")
+pm.collectionVariables.unset("VariableName")
+pm.environment.unset("VariableName")
+
+--> CLEARING VARIABLES
+
+pm.globals.clear()
+pm.collectionVariables.clear()
+pm.enviroment.clear()

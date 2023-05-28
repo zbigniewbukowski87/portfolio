@@ -57,7 +57,7 @@ X	3.18. Sprawdzenie czy w polu Username można wprowadzić nazwę zaczynającą 
 	4.2. Sprawdzenie czy można zapisać formularz dodawania nowego pracownika bez wypełnienia jednego z obowiązkowych pól
 	4.3. Sprawdzenie czy można wprowadzić nowego pracownika posiadającego ten sam Username który już istniej w bazie pracowników
 	4.4. Sprawdzenie czy w polu First name można wprowadzić wartość liczbową	
-	4.5. sprawdzenie ile znakó można wprowadzić w polu First name
+	4.5. sprawdzenie ile znaków można wprowadzić w polu First name
 	4.6. Sprawdzenie czy po wprowadzeniu w polu Username istniejącej już nazwy użytkownika aplikacja wyświetli od razu komunikat że dane username już istnieje
  	4.7. Sprawdzenie czy przy wprowadzaniu nowego użytkownika po wprowadzeniu istniejącego już Username i próbie zapisu, po wprowadzeniu nie występującego w bazie Username komunikat o błędzie zniknie
 	4.8. Sprawdzenie Czy przy wprowadzaniu nowego pracownikaw polu Last name można wrowadzić wartość liczbową
