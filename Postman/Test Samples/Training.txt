@@ -7,6 +7,9 @@ pm.test("Check Method", () => {
 pm.expect(pm.response.json().method).to.be.eql("DELETE")
 })
 
+CHECK STATUS
 
+pm.test("Verify status", () => {
+pm.response.to.have.status(200);
+})
 
-https://api.postman.com/collections/25110911-f4870f98-858a-421a-8b36-13792b46f2fb?access_key=PMAT-01H1FFZZAPAKB0M0E2X8Z027XG
