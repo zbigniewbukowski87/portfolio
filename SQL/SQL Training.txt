@@ -81,6 +81,7 @@ UPDATE products SET productLine = 'Classic Cars' WHERE productCode = 'S10_1678'
 UPDATE employees SET jobTitle = 'VP Marketing' WHERE employeeNumber = 1056;
 UPDATE customers SET addressLine2 = 'Rue Royale' Where customerNumber = 103;
 UPDATE offices SET addressLine2 = 'Rue Morgue 1', state = 'Provance' WHERE officeCode = 4
+UPDATE suppliers SET City = 'Okayma' WHERE SupplierID = 4
 
 LIMIT
 SELECT * FROM `products` ORDER BY Price DESC LIMIT 3;
@@ -156,6 +157,7 @@ DROP TABLE test_table
 
 ALTER TABLE ADD
 ALTER TABLE test_table ADD Country Varchar(20)
+ALTER TABLE table_22 ADD Description Varchar(120)
 
 ALTER TABLE MODIFY COLUMN
 ALTER TABLE test_table MODIFY COLUMN Birth_Date int NOT NULL

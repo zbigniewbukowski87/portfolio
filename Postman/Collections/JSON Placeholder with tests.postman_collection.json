@@ -146,7 +146,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Post new post",
 			"event": [
 				{
 					"listen": "test",
@@ -188,7 +188,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Modify post 86",
 			"event": [
 				{
 					"listen": "test",
@@ -224,6 +224,72 @@
 					"path": [
 						"posts",
 						"86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete post 86",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response.headers.get(\"X-Powered-By\"))\r",
+							"\r",
+							"pm.test(\"check correctness of header X-powered-by\", () => {\r",
+							"pm.expect(pm.response.headers.get(\"X-Powered-By\")).to.be.eql(\"Express\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/posts/86",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"posts",
+						"86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Photo with ID = 10",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.json())\r",
+							"\r",
+							"pm.test(\"check corectness of URL\", ()=> {\r",
+							"pm.expect(pm.response.json().url).to.include('https://via.placeholder.com')    \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/photos/10",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"photos",
+						"10"
 					]
 				}
 			},

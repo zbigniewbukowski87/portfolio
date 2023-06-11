@@ -1,15 +1,26 @@
-CONSOLE LOG
+--> CONSOLE LOG
 console.log(pm.response.json());
 
-CHECK METHOD
+--> CHECK METHOD
 
 pm.test("Check Method", () => {
 pm.expect(pm.response.json().method).to.be.eql("DELETE")
 })
 
-CHECK STATUS
+--> CHECK STATUS
 
 pm.test("Verify status", () => {
 pm.response.to.have.status(200);
 })
 
+--> HEADER CONTENT CORRECTNESS
+
+pm.test("check correctness of header X-powered-by", () => {
+pm.expect(pm.response.headers.get("X-Powered-By")).to.be.eql("Express")
+})
+
+--> TO INCLUDE
+
+pm.test("check corectness of URL", ()=> {
+pm.expect(pm.response.json().url).to.include('https://via.placeholder.com')    
+})

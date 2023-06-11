@@ -1,0 +1,1 @@
+C:\Users\Edu\Desktop\Portfolio\Postman\Collections> newman run "JSON Placeholder with tests.postman_collection.json"

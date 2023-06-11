@@ -1,0 +1,85 @@
+4. Check "New" and "Edit" functions on employee's tab - Done 7 Defects
+
+4.1. Checking if function 'New' work properly
+After click option 'New' there should appear employee create form 
+This test case is created in order to check if after click option 'New' there will appear employee create form
+
+4.2. Checking the working of mandatory fields
+Application should not allow user to save new employer if one of mandatory fields is empty
+This test case is created in order to check if application will allow user to save new employer if one of mandatory fields is empty
+
+4.3. Checking if it is possible to enter new employer which Username already figured in database
+Application should not allow user to save new employer if his Username already figured in database
+This test case is created in order to check if application allow user to save new employer if his Username already figured in database
+
+4.4. Checking if it is possible to enter the numbers in field 'First name'
+Application should not allow user to save new employer if field 'First name' contains the numbers
+This test case is created in order to check if application will allow user to save new employer if field 'First name' contains the numbers
+
+4.5. Checking how many signs can by typed in field 'First name'
+Application should allow user to type at least 20 signs in field 'First name'
+This test case is created in order to check how many signs can be typed in field 'First name'
+
+4.6. Checking the validation of new username
+Application should show validation text if user try to enter new employee with username which already exist in the base
+This test case is created in order to check if application will how validation text if user try to enter new employee with username which already exist in the base
+
+4.7. Checking if validation of new username refresh correctly
+After using already exists username during create of new employee and delete it from the box validation text should disappear
+This test case is created in order to check if application refresh the validation of field Username correctly
+
+4.8. Checking if it is possible to type numbers in field 'Last name'
+Application should not allow user to type numbers in field 'Last name'. There should appear validation text with information that it is not possible to type numbers in field 'Last name'
+This test case is created in order to check if application allow user to type numbers in field 'Last name'
+
+4.9. Checking if it is possible to type polish letters in field 'Usernanme'
+Application should allow user to use polish letters in field 'Username' during create of new employee
+This test case is created in order to check if application allow user to use polish letters in field 'Username' during create of new employee
+
+4.10. Checking if it is possible to type polish letters in field 'First name'
+Application should allow user to use polish letters in field 'First name' during create of new employee
+This test case is created in order to check if application allow user to use polish letters in field 'First name' during create of new employee
+
+4.11. Checking if it is possible to type polish letters in field 'Last name'
+Application should allow user to use polish letters in field 'Last name' during create of new employee
+This test case is created in order to check if application allow user to use polish letters in field 'Lirst name' during create of new employee
+
+4.12. Checking if it is possible to type letters in field 'Phone number'
+Application should not allow user to type letters in field 'Phone number' during create of new employee. There should appear validation text with information that it is not possible to type letters in field 'Phone number'
+This test case is created in order to check if application allow user to type letters in field 'Phone number' during create of new employee
+
+4.13. Checking if it is possible to type letters in field 'Years of expirence'
+Application should not allow user to type letters in field 'Years of expirence' during create of new employee. There should appear validation text with information that it is not possible to type letters in field 'Years of expirence'
+This test case is created in order to check if application allow user to type letters in field 'Years of expirence' during create of new employee
+
+4.14. Checking if after update 'Username' data will be overwritten correctly
+After update the field 'Username' and save data new username should be visible in user profile
+This test case is created in order to check if field "Username" can be correctly overwritten with new data
+
+4.15. Checking if after update 'First name' data will be overwritten correctly
+After update the field 'First name' and save data new name should be visible in user profile
+This test case is created in order to check if field 'First name' can be correctly overwritten with new data
+
+4.16. Checking if after update 'Last name' data will be overwritten correctly
+After update the field 'Last name' and save data new name should be visible in user profile
+This test case is created in order to check if field 'Last name' can be correctly overwritten with new data
+
+4.17. Checking if after update 'Phone number' data will be overwritten correctly
+After update the field 'Phone number' and save data new number should be visible in user profile
+This test case is created in order to check if field 'Phone number' can be correctly overwritten with new data
+
+4.18. Checking if after update 'Years of expirence' data will be overwritten correctly
+After update the field 'Years of expirence' and save data new quantity should be visible in user profile
+This test case is created in order to check if field 'Years of expirence' can be correctly overwritten with new data
+
+4.19. Checking if after update 'Specialization / skills' data will be overwritten correctly
+After update the field 'Specialization / skills' and save data new choosed option/options should be visible in user profile
+This test case is created in order to check if field 'Specialization / skills' can be correctly overwritten with new data
+
+4.20. Checking if it is possible to choose all 3 'Specialization / skills'
+After choosing all 3 options in field 'Specialization / skills' and save profile data shold be overwritten correctly
+This test case is created in order to check if it is possible to choose all 3 'Specialization / skills'
+
+4.21. Checking if validetion of field 'Years of expirence' works correctly
+Application should not allow user to save the updated profile if the number in field 'Years of expirence' is higher than 100. There should appear validation text with information that in field 'Years of expirence' there can be typed the number only up to 100.
+This test case is created in order to check if application will allow user to save the updated profile if the number in field 'Years of expirence' is higher than 100.
