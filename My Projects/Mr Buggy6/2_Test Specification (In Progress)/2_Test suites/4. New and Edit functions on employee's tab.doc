@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Mr. Buggy 6 - 4. Check &amp;quot;New&amp;quot; and &amp;quot;Edit&amp;quot; functions on employee's tab</title>
+<link type="text/css" rel="stylesheet" href="http://127.0.0.1/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width=231 height=56 src="http://127.0.0.1/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Mr. Buggy 6<br/>Test Suite: Mr. Buggy 6 - 4. Check &quot;New&quot; and &quot;Edit&quot; functions on employee's tab</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 06/13/2023</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.4. Check &quot;New&quot; and &quot;Edit&quot; functions on employee's tab</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc293">B6-48: 4.1. Checking if function 'New' work properly</a></p><p style="padding-left: 45px;"><a href="#toc_tc299">B6-49: 4.2. Checking the working of mandatory fields</a></p><p style="padding-left: 45px;"><a href="#toc_tc310">B6-50: 4.3. Checking if it is possible to enter new employer which Username already figured in database</a></p><p style="padding-left: 45px;"><a href="#toc_tc316">B6-51: 4.4. Checking if it is possible to enter the numbers in field 'First name'</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Testing of application Mr. Buggy 6 according to guidelines of its developers.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : 4. Check &quot;New&quot; and &quot;Edit&quot; functions on employee's tab</h1>
+<a name="toc_tc293"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-48: 4.1. Checking if function 'New' work properly&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if after click option &#39;New&#39; there will appear employee create form</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After click option &#39;New&#39; there should appear employee create form .</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click &#39;Employees&#39;</p>
+</td><td><p>There should open employees page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click &#39;New&#39;</p>
+</td><td><p>There should appear employee create form</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc299"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-49: 4.2. Checking the working of mandatory fields&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to save new employer if one of mandatory fields is empty</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save new employer if one of mandatory fields is empty</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click &#39;Employees&#39;</p>
+</td><td><p>There should open employees page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click &#39;New&#39;</p>
+</td><td><p>There should appear employee create form</p>
+</td></tr><tr><td width="5">4</td><td><p>Fill in all data except field &#39;Username&#39; and try to save form</p>
+</td><td><p>Application should not save the form. There should appear validation text with information that field &#39;Username&#39; is mandatory</p>
+</td></tr><tr><td width="5">5</td><td><p>Fill in all data except field &#39;First name&#39; and try to save form</p>
+</td><td><p>Application should not save the form. There should appear validation text with information that field &#39;First name&#39; is mandatory</p>
+</td></tr><tr><td width="5">6</td><td><p>Fill in all data except field &#39;Last name&#39; and try to save form</p>
+</td><td><p>Application should not save the form. There should appear validation text with information that field &#39;Last name&#39; is mandatory</p>
+</td></tr><tr><td width="5">7</td><td><p>Fill in all data except field &#39;Phone number&#39; and try to save form</p>
+</td><td><p>Application should not save the form. There should appear validation text with information that field &#39;Phone number&#39; is mandatory</p>
+</td></tr><tr><td width="5">8</td><td><p>Fill in all data except field &#39;Years of experience&#39; and try to save form</p>
+</td><td><p>Application should not save the form. There should appear validation text with information that field Years of experience&#39; is mandatory</p>
+</td></tr><tr><td width="5">9</td><td><p>Fill in all data except field &#39;Specialisation / skills&#39; and try to save form</p>
+</td><td><p>Application should not save the form. There should appear validation text with information that field &#39;Specialisation / skills&#39; is mandatory</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc310"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-50: 4.3. Checking if it is possible to enter new employer which Username already figured in database&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application allow user to save new employer if his Username already figured in database</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save new employer if his Username already figured in database</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click &#39;Employees&#39;<br />
+&nbsp;</p>
+</td><td><p>There should open employees page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click &#39;New&#39;<br />
+&nbsp;</p>
+</td><td><p>There should appear employee create form</p>
+</td></tr><tr><td width="5">4</td><td><p>Fill in all mandatory data. Type in same username which already exists in database then click save</p>
+</td><td><p>Application should not save new employee. There should appear validation text with information that used username already exists in database</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc316"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-51: 4.4. Checking if it is possible to enter the numbers in field 'First name'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to save new employer if field &#39;First name&#39; contains the numbers</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save new employer if field &#39;First name&#39; contains the numbers<br />
+&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click &#39;Employees&#39;<br />
+&nbsp;</p>
+</td><td><p>There should open employees page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click &#39;New&#39;<br />
+&nbsp;</p>
+</td><td><p>There should appear employee create form</p>
+</td></tr><tr><td width="5">4</td><td><p>Fill in all mandatory data. In field &#39;First name&#39; type in the data which contains the numbers then cick save</p>
+</td><td><p>Application soud not save new employee. There should apperar validation text with information that field &#39;First name&#39; cannot contais the numbers</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>
