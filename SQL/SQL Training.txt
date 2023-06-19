@@ -82,6 +82,7 @@ UPDATE employees SET jobTitle = 'VP Marketing' WHERE employeeNumber = 1056;
 UPDATE customers SET addressLine2 = 'Rue Royale' Where customerNumber = 103;
 UPDATE offices SET addressLine2 = 'Rue Morgue 1', state = 'Provance' WHERE officeCode = 4
 UPDATE suppliers SET City = 'Okayma' WHERE SupplierID = 4
+UPDATE new_table SET column3 = 4 WHERE column1 = 1
 
 LIMIT
 SELECT * FROM `products` ORDER BY Price DESC LIMIT 3;
@@ -135,6 +136,7 @@ INSERT INTO
 INSERT INTO products VALUES ('s11' , 'XXX', 'Motorcycles' , '1:11' , 'x' , 'x', 'x', 'x', 'x' );
 INSERT INTO offices VALUES(NULL, 'Wrocław', '733 053 505', 'Pl. Zgody', '9/13', 'Dolnośląskie', 'Poland', '50-432', 'Europe') 
 INSERT INTO Projects VALUES(2, 'NewApp', 'BestApps', '1987-11-18') 
+INSERT INTO new_table VALUES(1,2,3);
 
 DELETE
 DELETE FROM products WHERE productName = 'XXX'
@@ -158,12 +160,15 @@ DROP TABLE test_table
 ALTER TABLE ADD
 ALTER TABLE test_table ADD Country Varchar(20)
 ALTER TABLE table_22 ADD Description Varchar(120)
+ALTER TABLE new_table ADD column3 int
 
 ALTER TABLE MODIFY COLUMN
 ALTER TABLE test_table MODIFY COLUMN Birth_Date int NOT NULL
+ALTER TABLE new_table MODIFY column2 varchar(10)
 
 ALTER COLUM DROP COLUMN
 ALTER TABLE test_table DROP COLUMN Country
+ALTER TABLE new_table DROP column2
 
 Błędy:
 

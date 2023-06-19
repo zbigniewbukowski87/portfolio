@@ -1,281 +1,381 @@
 {
-	"id": "b7bf2e97-c5f4-4977-b5a5-01565766bdcb",
-	"name": "JSON Placeholder with tests",
-	"timestamp": "2023-06-11T20:27:28.913Z",
-	"collection_id": "25110911-f4870f98-858a-421a-8b36-13792b46f2fb",
-	"folder_id": 0,
-	"environment_id": "25110911-787e2123-c32d-4e54-966e-75ed068bd68d",
-	"totalPass": 15,
-	"delay": 0,
-	"persist": true,
-	"status": "finished",
-	"startedAt": "2023-06-11T20:27:25.353Z",
-	"totalFail": 0,
-	"results": [
+	"info": {
+		"_postman_id": "f4870f98-858a-421a-8b36-13792b46f2fb",
+		"name": "JSON Placeholder with tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25110911"
+	},
+	"item": [
 		{
-			"id": "6e51e3f6-bf96-4305-8b63-4562c1f3570b",
 			"name": "Get all posts",
-			"url": "https://jsonplaceholder.typicode.com/posts",
-			"time": 234,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"should verify response status code": true,
-				"Should verify response time": true,
-				"should verify response status": true,
-				"should verify post id": true,
-				"Verify lenght of name": true,
-				"Verify contain of body": true
-			},
-			"testPassFailCounts": {
-				"should verify response status code": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Should verify response time": {
-					"pass": 1,
-					"fail": 0
-				},
-				"should verify response status": {
-					"pass": 1,
-					"fail": 0
-				},
-				"should verify post id": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Verify lenght of name": {
-					"pass": 1,
-					"fail": 0
-				},
-				"Verify contain of body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				234
-			],
-			"allTests": [
+			"event": [
 				{
-					"should verify response status code": true,
-					"Should verify response time": true,
-					"should verify response status": true,
-					"should verify post id": true,
-					"Verify lenght of name": true,
-					"Verify contain of body": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"should verify response status code\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response status code\", () => {\r",
+							"pm.expect(pm.response.code).to.eql(200)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Should verify response time\", () => {\r",
+							"    //console.log(pm.response)\r",
+							"    pm.expect(pm.response.responseTime).to.lessThan(2000) \r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify response status\", () => {\r",
+							"    pm.expect(pm.response.status).to.eql(\"OK\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"should verify post id\", () => {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody[0].id).to.be.eql(1);\r",
+							"})\r",
+							"\r",
+							"pm.test('Verify lenght of name', () => {\r",
+							"    console.log(pm.response.json());\r",
+							"    pm.expect(pm.response.json()[0].title).to.have.lengthOf(74);\r",
+							"})\r",
+							"\r",
+							"pm.test('Verify contain of body', () => {\r",
+							"    const responseBody = pm.response.json();\r",
+							"    pm.expect(responseBody[0].body).to.include(\"quia\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "00b8f171-2d67-4423-8f54-3303da1675b6",
 			"name": "Get post 86",
-			"url": "https://jsonplaceholder.typicode.com/posts/86",
-			"time": 208,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Check user id": true,
-				"check lenght of title": true
-			},
-			"testPassFailCounts": {
-				"Check user id": {
-					"pass": 1,
-					"fail": 0
-				},
-				"check lenght of title": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				208
-			],
-			"allTests": [
+			"event": [
 				{
-					"Check user id": true,
-					"check lenght of title": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check user id\", () => {\r",
+							"pm.expect(pm.response.json().userId).to.be.eql(9)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"check lenght of title\", () => {\r",
+							"pm.expect(pm.response.json().title).to.have.lengthOf(26)\r",
+							"})\r",
+							"console.log(pm.response.json())"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/86",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"86"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "9e1c1a6e-1786-480c-9a42-6564a8a2874d",
 			"name": "Get comments of post 86",
-			"url": "https://jsonplaceholder.typicode.com/posts/86/comments",
-			"time": 220,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"check id of third comment": true,
-				"verify contain of header X-Ratelimit-Remaining": true
-			},
-			"testPassFailCounts": {
-				"check id of third comment": {
-					"pass": 1,
-					"fail": 0
-				},
-				"verify contain of header X-Ratelimit-Remaining": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				220
-			],
-			"allTests": [
+			"event": [
 				{
-					"check id of third comment": true,
-					"verify contain of header X-Ratelimit-Remaining": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"check id of third comment\", () => {\r",
+							"    pm.expect(pm.response.json()[2].id).to.be.eql(428)\r",
+							"})\r",
+							"\r",
+							"pm.test(\"verify contain of header X-Ratelimit-Remaining\", () => {\r",
+							"pm.expect(pm.response.headers.get(\"X-Powered-By\")).to.eql(\"Express\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/86/comments",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"86",
+						"comments"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "a3cd4669-6610-47b0-a41d-a6e84432db25",
 			"name": "Post new post",
-			"url": "https://jsonplaceholder.typicode.com/posts",
-			"time": 419,
-			"responseCode": {
-				"code": 201,
-				"name": "Created"
-			},
-			"tests": {
-				"verify UserID": true
-			},
-			"testPassFailCounts": {
-				"verify UserID": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				419
-			],
-			"allTests": [
+			"event": [
 				{
-					"verify UserID": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response.json())\r",
+							"\r",
+							"pm.test(\"verify UserID\", () => {\r",
+							"pm.expect(pm.response.json().userId).to.be.greaterThan(0)\r",
+							"pm.expect(pm.response.json().userId).to.be.lessThan(2)     \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"id\": 101,\r\n    \"title\": \"test post\",\r\n    \"body\": \"test post with automatic tests\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/posts",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "72a56f68-40cc-4594-acd7-d2d307c31bd2",
 			"name": "Modify post 86",
-			"url": "https://jsonplaceholder.typicode.com/posts/86",
-			"time": 400,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Verify status": true
-			},
-			"testPassFailCounts": {
-				"Verify status": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				400
-			],
-			"allTests": [
+			"event": [
 				{
-					"Verify status": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.json())\r",
+							"\r",
+							"pm.test(\"Verify status\", () => {\r",
+							"pm.response.to.have.status(200)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Changed title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/posts/86",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"posts",
+						"86"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "6ad4d958-2e38-4683-a31a-33925e1ba81e",
 			"name": "Delete post 86",
-			"url": "https://jsonplaceholder.typicode.com/posts/86",
-			"time": 399,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"check correctness of header X-powered-by": true
-			},
-			"testPassFailCounts": {
-				"check correctness of header X-powered-by": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				399
-			],
-			"allTests": [
+			"event": [
 				{
-					"check correctness of header X-powered-by": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response.headers.get(\"X-Powered-By\"))\r",
+							"\r",
+							"pm.test(\"check correctness of header X-powered-by\", () => {\r",
+							"pm.expect(pm.response.headers.get(\"X-Powered-By\")).to.be.eql(\"Express\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/posts/86",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"posts",
+						"86"
+					]
+				}
+			},
+			"response": []
 		},
 		{
-			"id": "563bfeb2-3640-44ee-9d6e-fac00765d947",
 			"name": "Get Photo with ID = 10",
-			"url": "https://jsonplaceholder.typicode.com/photos/10",
-			"time": 215,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"check corectness of URL": true
-			},
-			"testPassFailCounts": {
-				"check corectness of URL": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				215
-			],
-			"allTests": [
+			"event": [
 				{
-					"check corectness of URL": true
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.json())\r",
+							"\r",
+							"pm.test(\"check corectness of URL\", ()=> {\r",
+							"pm.expect(pm.response.json().url).to.include('https://via.placeholder.com')    \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
 				}
-			]
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/photos/10",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"photos",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response.json().username)\r",
+							"\r",
+							"pm.test('Check username', () => {\r",
+							"pm.expect(pm.response.json().username).to.be.eql(\"Funky Clark\") \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 11,\r\n  \"name\": \"Clark Griswold\",\r\n  \"username\": \"Funky Clark\",\r\n  \"email\": \"Clarkyy@april.biz\",\r\n  \"address\": {\r\n    \"street\": \"Kulas Light\",\r\n    \"suite\": \"Apt. 556\",\r\n    \"city\": \"Gwenborough\",\r\n    \"zipcode\": \"92998-3874\",\r\n    \"geo\": {\r\n      \"lat\": \"-37.3159\",\r\n      \"lng\": \"81.1496\"\r\n    }\r\n  },\r\n  \"phone\": \"1-770-736-8031 x56442\",\r\n  \"website\": \"hildegard.org\",\r\n  \"company\": {\r\n    \"name\": \"Romaguera-Crona\",\r\n    \"catchPhrase\": \"Multi-layered client-server neural-net\",\r\n    \"bs\": \"harness real-time e-markets\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/users",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
 		}
 	],
-	"count": 1,
-	"totalTime": 2095,
-	"collection": {
-		"requests": [
-			{
-				"id": "6e51e3f6-bf96-4305-8b63-4562c1f3570b",
-				"method": "GET"
-			},
-			{
-				"id": "00b8f171-2d67-4423-8f54-3303da1675b6",
-				"method": "GET"
-			},
-			{
-				"id": "9e1c1a6e-1786-480c-9a42-6564a8a2874d",
-				"method": "GET"
-			},
-			{
-				"id": "a3cd4669-6610-47b0-a41d-a6e84432db25",
-				"method": "POST"
-			},
-			{
-				"id": "72a56f68-40cc-4594-acd7-d2d307c31bd2",
-				"method": "PUT"
-			},
-			{
-				"id": "6ad4d958-2e38-4683-a31a-33925e1ba81e",
-				"method": "DELETE"
-			},
-			{
-				"id": "563bfeb2-3640-44ee-9d6e-fac00765d947",
-				"method": "GET"
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
 			}
-		]
-	}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Post_title",
+			"value": "my first post (Collection)",
+			"type": "string"
+		},
+		{
+			"key": "Test_user",
+			"value": "10",
+			"type": "string"
+		},
+		{
+			"key": "UserID",
+			"value": ""
+		},
+		{
+			"key": "BaseURL",
+			"value": "https://jsonplaceholder.typicode.com",
+			"type": "string"
+		}
+	]
 }

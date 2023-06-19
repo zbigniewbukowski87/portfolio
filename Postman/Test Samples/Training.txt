@@ -24,3 +24,9 @@ pm.expect(pm.response.headers.get("X-Powered-By")).to.be.eql("Express")
 pm.test("check corectness of URL", ()=> {
 pm.expect(pm.response.json().url).to.include('https://via.placeholder.com')    
 })
+
+--> CHECK BODYRESPONSE DATA
+
+pm.test('Check username', () => {
+pm.expect(pm.response.json().username).to.be.eql("Funky Clark") 
+})
