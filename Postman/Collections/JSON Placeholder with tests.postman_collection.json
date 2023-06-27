@@ -334,6 +334,49 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "update todo completed status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//console.log(pm.response)\r",
+							"\r",
+							"pm.test('Check response status', () => {\r",
+							"    pm.expect(pm.response.status).to.be.eql(\"OK\")\r",
+							"    \r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 1,\r\n  \"id\": 3,\r\n  \"title\": \"fugiat veniam minus\",\r\n  \"completed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/todos/3",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"todos",
+						"3"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
