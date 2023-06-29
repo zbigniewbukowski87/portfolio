@@ -116,6 +116,7 @@ SELECT COUNT(CustomerID), Country FROM customers GROUP BY Country HAVING COUNT(C
 SELECT COUNT(productCode), productLine FROM `products` GROUP BY productLine HAVING COUNT(productCode) > 10 ORDER BY COUNT(productCode) DESC;
 
 INNER JOIN
+SELECT drivers.driverRef, pitstops.duration FROM drivers INNER JOIN pitstops ON drivers.driverId = pitstops.driverId ORDER BY pitstops.duration LIMIT 5;
 SELECT employees.*, offices.country FROM employees INNER JOIN offices ON employees.officeCode = offices.officeCode;
 SELECT products.ProductName, suppliers.Country FROM products INNER JOIN suppliers ON products.SupplierID = suppliers.SupplierID ORDER BY ProductName ASC;
 SELECT customers.customerName, employees.email, employees.jobTitle FROM customers INNER JOIN employees ON customers.salesRepEmployeeNumber=employees.employeeNumber order by employees.email ASC;

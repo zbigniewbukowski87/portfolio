@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Mr. Buggy 6 - 3. Check edition of the “Profile” form</title>
+<link type="text/css" rel="stylesheet" href="http://127.0.0.1/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width=231 height=56 src="http://127.0.0.1/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Mr. Buggy 6<br/>Test Suite: Mr. Buggy 6 - 3. Check edition of the “Profile” form</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 05/21/2023</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.3. Check edition of the “Profile” form</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc164">B6-30: 3.1. Checking if after clicking 'Edit' profile edit form will appear</a></p><p style="padding-left: 45px;"><a href="#toc_tc166">B6-31: 3.2. Checking if it is possible to update a profile if one of mandatory fields is empty</a></p><p style="padding-left: 45px;"><a href="#toc_tc168">B6-32: 3.3. Checking if after updating the password it is possilbe to log in with new password</a></p><p style="padding-left: 45px;"><a href="#toc_tc170">B6-33: 3.4. Checking if after updating the password it is possilbe to log in with old password</a></p><p style="padding-left: 45px;"><a href="#toc_tc172">B6-34: 3.5. Checking if after updating the profile and click 'Edit' there will appear updated data in form</a></p><p style="padding-left: 45px;"><a href="#toc_tc174">B6-35: 3.6. Checking if it is possible to save edit form where field Role is empty</a></p><p style="padding-left: 45px;"><a href="#toc_tc176">B6-36: 3.7. Checking if polish signs will be visible in updated data</a></p><p style="padding-left: 45px;"><a href="#toc_tc178">B6-37: 3.8. Checking if it is possilble to update an email adres which contains polish signs</a></p><p style="padding-left: 45px;"><a href="#toc_tc180">B6-38: 3.9. Checking if it is possible to sellect each role</a></p><p style="padding-left: 45px;"><a href="#toc_tc182">B6-39: 3.10. Checking if it is possible to enter numbers in field 'First name'</a></p><p style="padding-left: 45px;"><a href="#toc_tc184">B6-40: 3.11. Checking if it is possible to enter numbers in field 'Last name'</a></p><p style="padding-left: 45px;"><a href="#toc_tc186">B6-41: 3.12. Checking if it is possible to enter letters in field 'Phone number'</a></p><p style="padding-left: 45px;"><a href="#toc_tc188">B6-42: 3.13. Checking how many signs can be entered in fields &quot;First name' and 'Last name'</a></p><p style="padding-left: 45px;"><a href="#toc_tc190">B6-43: 3.14. Checking how many signs can be entered in field &quot;Phone number''</a></p><p style="padding-left: 45px;"><a href="#toc_tc192">B6-44: 3.15. Checking if it is possible to enter special signs in field 'Phone number'</a></p><p style="padding-left: 45px;"><a href="#toc_tc194">B6-45: 3.16. Checking if it is possible to update email adres with new adres which contains space</a></p><p style="padding-left: 45px;"><a href="#toc_tc196">B6-46: 3.17. Checking if it is possilbe to update email adress for new one which contains special signs</a></p><p style="padding-left: 45px;"><a href="#toc_tc198">B6-47: 3.18. Checking if it is possible to update Username for new one which start from big character</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Testing of application Mr. Buggy 6 according to guidelines of its developers.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : 3. Check edition of the “Profile” form</h1>
+<a name="toc_tc164"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-30: 3.1. Checking if after clicking 'Edit' profile edit form will appear&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This case is created in order to test if after clicking &#39;Edit&#39; profile there will&nbsp;appear update profile form</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After clicking &#39;Edit&#39; profile there should appear update profile form</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click Profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click Edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc166"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-31: 3.2. Checking if it is possible to update a profile if one of mandatory fields is empty&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This case is created in order to check if application will&nbsp;allow to save Update form if one of mandatory fields is empty.&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow to save Update form if one of mandatory fields is empty. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+
+<p>&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+
+<p>&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+
+<p>&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Try to save Update profile form if Username field is left empty<br />
+&nbsp;</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="5">5</td><td><p>Try to save Update profile form if First name field is left empty</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="5">6</td><td><p>Try to save Update profile form if Last name field is left empty</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="5">8</td><td><p>Try to save Update profile form if Phone number field is left empty</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="5">9</td><td><p>Try to save Update profile form if Role field is left empty</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="5">10</td><td><p>Try to save Update profile form if Password field is left empty</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="5">11</td><td><p>Try to save Update profile form if Email field is left empty</p>
+</td><td><p>Application should not allow to save Update form. There should appear validation text with information that all mandatory fields need to be fulfilled.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">20.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc168"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-32: 3.3. Checking if after updating the password it is possilbe to log in with new password&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to log in with new password</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should allow user to log in with new password</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Change password for new one and click save</p>
+</td><td><p>New password should be save properly</p>
+</td></tr><tr><td width="5">5</td><td><p>Logout from the account</p>
+</td><td><p>There should appear the login site</p>
+</td></tr><tr><td width="5">6</td><td><p>Try to log in on users account with the new password</p>
+</td><td><p>User should be able to log in with new password</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc170"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-33: 3.4. Checking if after updating the password it is possilbe to log in with old password&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to log in with password which was already changed<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to log in with password which was already changed<br />
+&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Change password for new one and click save</p>
+</td><td><p>New password should be save properly</p>
+</td></tr><tr><td width="5">5</td><td><p>Logout from the account</p>
+</td><td><p>There should appear the login site</p>
+</td></tr><tr><td width="5">6</td><td><p>Try to log in on users account with the old password</p>
+</td><td><p>User should not be able to log in with old password</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Password<br />Log in<br />Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc172"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-34: 3.5. Checking if after updating the profile and click 'Edit' there will appear updated data in form&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check&nbsp;if after updating the profile and click &#39;Edit&#39; there will appear updated data in the form</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>After updating each of profile data and again click &#39;Edit&#39; there should appear&nbsp;new updated data in the form</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Change data in each fields:&nbsp;Username, First name, Last name, Phone number, Role ,Password , Email&nbsp;and click save</p>
+</td><td><p>New data&nbsp;should be save properly</p>
+</td></tr><tr><td width="5">5</td><td><p>Click edit again</p>
+</td><td><p>There should appear the Update profile form which contain new data</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc174"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-35: 3.6. Checking if it is possible to save edit form where field Role is empty&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if it is possible&nbsp;to save edit form where field Role is empty</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user&nbsp;to save edit form where field Role is empty</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>In the field Role select option &quot;choose one...&quot; then try to save edit form</p>
+</td><td><p>application should not allow user to save form. There should appear validation text with information that it is necsessary to select option in firld Role</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc176"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-36: 3.7. Checking if polish signs will be visible in updated data&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if&nbsp;Application will allow user to write the data which contains polish signs in update form</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should allow user to write the data which contains polish signs in update form</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Try if it is possible to type the data which contains polish signs in update form</p>
+</td><td><p>Application should allow user to type the data which contains polish signs</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc178"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-37: 3.8. Checking if it is possilble to update an email adres which contains polish signs&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if&nbsp;Application will allow user to save updated profile if email adress contains polish signs</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save updated profile if email adress contains polish signs</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Try to update email adress with new one whih contains polish signs then try to save form</p>
+</td><td><p>Application should not allow usr to save updated form if email adress contains polish signs</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc180"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-38: 3.9. Checking if it is possible to sellect each role&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application allow user to chose each of roles during profile edition.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should allow user to chose each of roles during profile edition.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Choose each role during editing profile: Admin, Manager, Employee. After select each one try to save profile</p>
+</td><td><p>Application should save profile correctly after selecting each role</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">20.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc182"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-39: 3.10. Checking if it is possible to enter numbers in field 'First name'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to update profile if field &quot;first name&quot; contain the numbers.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to update profile if field &quot;first name&quot; contain the numbers.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Type in field &quot;First name&quot; the data which contain the number and try to save updated profile</p>
+</td><td><p>Application should not allow to update profile if field &quot;First name&quot; contain the numbers. There should appear validation text with information that field &quot;First name&quot; should not contain the number</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc184"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-40: 3.11. Checking if it is possible to enter numbers in field 'Last name'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to update profile if field &quot;last name&quot; contain the numbers.<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to update profile if field &quot;last name&quot; contain the numbers.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Type in field &quot;last name&quot; the data which contain the number and try to save updated profile</p>
+</td><td><p>Application should not allow to update profile if field &quot;Last name&quot; contain the numbers. There should appear validation text with information that field &quot;Last name&quot; should not contain the number</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc186"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-41: 3.12. Checking if it is possible to enter letters in field 'Phone number'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will&nbsp;allow user to save updated profile if field &quot;Phone number&quot; contains letters.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save updated profile if field &quot;Phone number&quot; contains letters.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy<br />
+&nbsp;</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile<br />
+&nbsp;</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit<br />
+&nbsp;</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Try to update field &quot;Phone number&quot; with new one which contain the letters, then click save</p>
+</td><td><p>Application should not allow to&nbsp;save updated profile if field &quot;Phone number&quot; contains letters. There should appear validation text with information that field &quot;Phone number&quot; cannot contain the letters</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc188"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-42: 3.13. Checking how many signs can be entered in fields &quot;First name' and 'Last name'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check how many signs can be entered in fields&nbsp;&#39;First name&#39; and &#39;Last name&#39;.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should let user to enter at least 20 signs in fields &#39;First name&#39; and &#39;Last name&#39;.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile&nbsp;page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Type at least 20 signs in both fields&nbsp;&#39;First name&#39; and &#39;Last name&#39;.</p>
+</td><td><p>Application should allow user to type at lease 20 signs in fields&nbsp;&#39;First name&#39; and &#39;Last name&#39;.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc190"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-43: 3.14. Checking how many signs can be entered in field &quot;Phone number''&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check how many signs can be entered in field &#39;Phone number&#39;.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should let user to enter at least 20 signs in field &#39;Phone number&#39;.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Type at least 20 signs in field &#39;Phone number&#39;</p>
+</td><td><p>Application should allow user to type at lease 20 signs in field &#39;Phone number&#39;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc192"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-44: 3.15. Checking if it is possible to enter special signs in field 'Phone number'&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will allow user to enter the special signs in field &#39;Phone number&#39;.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to enter the special signs in field &#39;Phone number&#39;.</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Type special signs in field &#39;Phone number&#39; then try to save update profile</p>
+</td><td><p>Application should not allow to save updated pofile which contains special signs in field &#39;Phone number&#39;. There should appear validaion text with information that it is not possible to set email adress which contains&nbsp;special signs in field &#39;Phone number&#39;.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc194"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-45: 3.16. Checking if it is possible to update email adres with new adres which contains space&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if Application will allow user to save updated profile if email adress contains space</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save updated profile if email adress contains space</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Try to update email adress with new one whih contains space then try to save form</p>
+</td><td><p>Application should not allow usr to save updated form if email adress contains space. There should appear validation text with information that field &quot;Email adress&quot; cannot contain the space</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc196"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-46: 3.17. Checking if it is possilbe to update email adress for new one which contains special signs&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if Application will allow user to save updated profile if email adress contains special signs</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should not allow user to save updated profile if email adress contains special signs<br />
+&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Try to update email adress with new one whih special signs then try to save form</p>
+</td><td><p>Application should not allow usr to save updated form if email adress contains special signs. There should appear validation text with information that field &#39;Email&#39; cannot contain the special signs</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+<a name="toc_tc198"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case B6-47: 3.18. Checking if it is possible to update Username for new one which start from big character&nbsp;<span style="font-size: 80%;">[Version : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">zbigniewbukowski87</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>This test case is created in order to check if application will&nbsp;allow user to&nbsp;update Username for new one which start from big charcter.&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Application should allow user to&nbsp;update Username for new one which start from big character. After save updated form big character in the begining of updated Username should be visible.</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>Run the application Mr. Buggy</p>
+</td><td><p>Application should run properly</p>
+</td></tr><tr><td width="5">2</td><td><p>Click profile</p>
+</td><td><p>There should appear the profile page</p>
+</td></tr><tr><td width="5">3</td><td><p>Click edit</p>
+</td><td><p>There should appear the Update profile form</p>
+</td></tr><tr><td width="5">4</td><td><p>Enter new username which starts from a big character. Then save the updated form</p>
+</td><td><p>Edit profile form should be saved properly</p>
+</td></tr><tr><td width="5">5</td><td><p>Click profile again</p>
+</td><td><p>Updated user name should be started from big character</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3">10.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">Profile edition<br /></td></tr>
+</table>
+</div>
+
+</body>
+</html>
