@@ -1,0 +1,13 @@
+public class LogicalOperators {
+
+    public static void main(String[] args) {
+        int firstNumber = 10;
+        int secondNumber = 20;
+        int thirdNumber = 30;
+
+        System.out.println( firstNumber<secondNumber && thirdNumber>secondNumber );
+        System.out.println( firstNumber<secondNumber || thirdNumber<secondNumber );
+        System.out.println( !(firstNumber<secondNumber && thirdNumber<secondNumber));
+    }
+
+}

@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "09c415ed-c85b-4479-b9a7-5d8b13590c43",
+		"name": "Formula 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25110911"
+	},
+	"item": [
+		{
+			"name": "Get season 2020 drivers list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Sebastian Vettel code corectness\", () => {\r",
+							"    pm.expect(pm.response.json().MRData.DriverTable.Drivers[22].code).to.be.eql(\"VET\")    \r",
+							"})\r",
+							"\r",
+							"pm.test(\"response must be valid and have a body\", function () {\r",
+							"     pm.response.to.be.ok;\r",
+							"     pm.response.to.be.withBody;\r",
+							"     pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ergast.com/api/f1/2020/drivers.json",
+					"protocol": "http",
+					"host": [
+						"ergast",
+						"com"
+					],
+					"path": [
+						"api",
+						"f1",
+						"2020",
+						"drivers.json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://ergast.com/api/f1",
+			"type": "string"
+		}
+	]
+}

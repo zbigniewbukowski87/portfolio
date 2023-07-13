@@ -114,12 +114,14 @@ SELECT Country, COUNT(CustomerID) FROM customers Group BY Country HAVING COUNT(C
 SELECT CategoryID AS 'Kategoria', COUNT(ProductID) FROM `products` GROUP BY CategoryID HAVING COUNT(ProductID) >= 12 ORDER BY COUNT(ProductID) DESC;
 SELECT COUNT(CustomerID), Country FROM customers GROUP BY Country HAVING COUNT(CustomerID) >= 5 ORDER BY COUNT(CustomerID) DESC;
 SELECT COUNT(productCode), productLine FROM `products` GROUP BY productLine HAVING COUNT(productCode) > 10 ORDER BY COUNT(productCode) DESC;
+SELECT Count(circuitId), country FROM `circuits` GROUP BY country HAVING Count(circuitID) >= 2 ORDER BY Count(circuitId) DESC;
 
 INNER JOIN
 SELECT drivers.driverRef, pitstops.duration FROM drivers INNER JOIN pitstops ON drivers.driverId = pitstops.driverId ORDER BY pitstops.duration LIMIT 5;
 SELECT employees.*, offices.country FROM employees INNER JOIN offices ON employees.officeCode = offices.officeCode;
 SELECT products.ProductName, suppliers.Country FROM products INNER JOIN suppliers ON products.SupplierID = suppliers.SupplierID ORDER BY ProductName ASC;
 SELECT customers.customerName, employees.email, employees.jobTitle FROM customers INNER JOIN employees ON customers.salesRepEmployeeNumber=employees.employeeNumber order by employees.email ASC;
+SELECT drivers.driverRef, laptimes.time FROM `laptimes` INNER JOIN drivers ON laptimes.driverId = drivers.driverId WHERE laptimes.raceId = 911 ORDER BY time ASC;
 
 LEFT JOIN
 SELECT orders.OrderID, employees.LastName FROM orders LEFT JOIN employees ON orders.EmployeeID = employees.EmployeeID ORDER BY LastName;
@@ -170,25 +172,3 @@ ALTER TABLE new_table MODIFY column2 varchar(10)
 ALTER COLUM DROP COLUMN
 ALTER TABLE test_table DROP COLUMN Country
 ALTER TABLE new_table DROP column2
-
-Błędy:
-
-SELECT AVG(Price) FROM `products` WHERE CategoryID = 1 AS 'Średnia Cena napojów'
--->AS powinien się znajdować zaraz za SELCTem
-SELECT AVG(Price) AS 'Średnia Cena napojów' FROM `products` WHERE CategoryID = 1;
-
-SELECT * AS 'Lista klientów z Niemiec' FROM `customers` WHERE Country = 'Germany';
---> AS odnosi się do konkretnej kolumny - nie można użyć SELECT *
-SELECT CustomerName AS 'Lista klientów z Niemiec' FROM `customers` WHERE Country = 'Germany';
-
-SELECT * FROM `products` WHERE quantityInStock LIKE (8___);
---> Wytyczne dla funkcji Like zostały umieszczone w nawiasie zamiast w cudzysłowiu
-SELECT * FROM `products` WHERE quantityInStock LIKE '8___';
-
-SELECT * FROM `products` WHERE productLine IS NOT "ships" AND productLine IS NOT "Planes"
---> Niepoprawna klauzula - zamiast IS NOT powinno być jak poniżej:
-SELECT * FROM `products` WHERE NOT productLine = "ships" AND NOT productLine = "Planes";
-
-SELECT customers.customerName, employees.email, employees.jobTitle FROM 'customers' INNER JOIN 'employees' ON customers.salesRepEmployeeNumber=employees.employeeNumber order by employees.email ASC;
---> nazwy tabel które mają być połączone umieszczone w cudzysłowiu
-SELECT customers.customerName, employees.email, employees.jobTitle FROM customers INNER JOIN employees ON customers.salesRepEmployeeNumber=employees.employeeNumber order by employees.email ASC;

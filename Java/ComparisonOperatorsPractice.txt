@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ComparisonOperators {
+
+    public static void main( String [] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter first number");
+        int firstNumber = scanner.nextInt();
+        System.out.println("Please enter first number");
+        int secondNumber = scanner.nextInt();
+
+        System.out.println("is first number bigger than second number? " + (firstNumber > secondNumber));
+        System.out.println("is first number smaller than second number? " + (firstNumber < secondNumber));
+        System.out.println("is first number equal to second number? " + (firstNumber == secondNumber));
+        System.out.println("is first number different to second number? " + (firstNumber != secondNumber));
+
+
+    }
+}

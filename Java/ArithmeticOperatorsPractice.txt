@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class ArithmeticOperators{
+    public static void main(String[] args) {
+        
+	Scanner scanner = new Scanner(System.in);
+        System.out.println("Hello! Please enter first number");
+        int firstNumber = scanner.nextInt();
+        System.out.println("Your choice " + firstNumber + "!");
+        System.out.println("Please enter enter second number");
+        int secondNumber = scanner.nextInt();
+        System.out.println("Your choices are " + firstNumber + " and " + secondNumber);
+        
+	int result1 = firstNumber + secondNumber;
+        int result2 = firstNumber - secondNumber;
+        int result3 = firstNumber * secondNumber;
+        int result4 = firstNumber / secondNumber;
+        
+	System.out.println("Result of addition " + result1);
+        System.out.println("Result of subtraction " + result2);
+        System.out.println("Result of multiplication " + result3);
+        System.out.println("Result of division " + result4);
+    }
+}
