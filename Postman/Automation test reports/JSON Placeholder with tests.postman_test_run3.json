@@ -1,0 +1,374 @@
+{
+	"id": "0bb6c768-5986-4a26-9920-21b8d6d80b43",
+	"name": "JSON Placeholder with tests",
+	"timestamp": "2023-07-24T20:34:50.278Z",
+	"collection_id": "25110911-f4870f98-858a-421a-8b36-13792b46f2fb",
+	"folder_id": 0,
+	"environment_id": "25110911-787e2123-c32d-4e54-966e-75ed068bd68d",
+	"totalPass": 18,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-07-24T20:34:44.374Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6e51e3f6-bf96-4305-8b63-4562c1f3570b",
+			"name": "Get all posts",
+			"url": "jsonplaceholder.typicode.com/posts",
+			"time": 460,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"should verify response status code": true,
+				"Should verify response time": true,
+				"should verify response status": true,
+				"should verify post id": true,
+				"Verify lenght of name": true,
+				"Verify contain of body": true
+			},
+			"testPassFailCounts": {
+				"should verify response status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Should verify response time": {
+					"pass": 1,
+					"fail": 0
+				},
+				"should verify response status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"should verify post id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify lenght of name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify contain of body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				460
+			],
+			"allTests": [
+				{
+					"should verify response status code": true,
+					"Should verify response time": true,
+					"should verify response status": true,
+					"should verify post id": true,
+					"Verify lenght of name": true,
+					"Verify contain of body": true
+				}
+			]
+		},
+		{
+			"id": "00b8f171-2d67-4423-8f54-3303da1675b6",
+			"name": "Get post 86",
+			"url": "https://jsonplaceholder.typicode.com/posts/86",
+			"time": 181,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check user id": true,
+				"check lenght of title": true
+			},
+			"testPassFailCounts": {
+				"Check user id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check lenght of title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				181
+			],
+			"allTests": [
+				{
+					"Check user id": true,
+					"check lenght of title": true
+				}
+			]
+		},
+		{
+			"id": "9e1c1a6e-1786-480c-9a42-6564a8a2874d",
+			"name": "Get comments of post 86",
+			"url": "https://jsonplaceholder.typicode.com/posts/86/comments",
+			"time": 388,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check id of third comment": true,
+				"verify contain of header X-Ratelimit-Remaining": true
+			},
+			"testPassFailCounts": {
+				"check id of third comment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify contain of header X-Ratelimit-Remaining": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				388
+			],
+			"allTests": [
+				{
+					"check id of third comment": true,
+					"verify contain of header X-Ratelimit-Remaining": true
+				}
+			]
+		},
+		{
+			"id": "a3cd4669-6610-47b0-a41d-a6e84432db25",
+			"name": "Post new post",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 372,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"verify UserID": true
+			},
+			"testPassFailCounts": {
+				"verify UserID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				372
+			],
+			"allTests": [
+				{
+					"verify UserID": true
+				}
+			]
+		},
+		{
+			"id": "72a56f68-40cc-4594-acd7-d2d307c31bd2",
+			"name": "Modify post 86",
+			"url": "https://jsonplaceholder.typicode.com/posts/86",
+			"time": 394,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify status": true
+			},
+			"testPassFailCounts": {
+				"Verify status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				394
+			],
+			"allTests": [
+				{
+					"Verify status": true
+				}
+			]
+		},
+		{
+			"id": "6ad4d958-2e38-4683-a31a-33925e1ba81e",
+			"name": "Delete post 86",
+			"url": "https://jsonplaceholder.typicode.com/posts/86",
+			"time": 434,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check correctness of header X-powered-by": true
+			},
+			"testPassFailCounts": {
+				"check correctness of header X-powered-by": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				434
+			],
+			"allTests": [
+				{
+					"check correctness of header X-powered-by": true
+				}
+			]
+		},
+		{
+			"id": "563bfeb2-3640-44ee-9d6e-fac00765d947",
+			"name": "Get Photo with ID = 10",
+			"url": "https://jsonplaceholder.typicode.com/photos/10",
+			"time": 385,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check corectness of URL": true
+			},
+			"testPassFailCounts": {
+				"check corectness of URL": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				385
+			],
+			"allTests": [
+				{
+					"check corectness of URL": true
+				}
+			]
+		},
+		{
+			"id": "62855dbe-39b8-4d1e-9c10-811af16acf45",
+			"name": "Create new user",
+			"url": "https://jsonplaceholder.typicode.com/users",
+			"time": 373,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Check username": true
+			},
+			"testPassFailCounts": {
+				"Check username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				373
+			],
+			"allTests": [
+				{
+					"Check username": true
+				}
+			]
+		},
+		{
+			"id": "92312edf-f357-432d-b97f-3360868ec36c",
+			"name": "update todo completed status",
+			"url": "https://jsonplaceholder.typicode.com/todos/3",
+			"time": 398,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check response status": true
+			},
+			"testPassFailCounts": {
+				"Check response status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				398
+			],
+			"allTests": [
+				{
+					"Check response status": true
+				}
+			]
+		},
+		{
+			"id": "24cdca37-cec2-4f8c-83df-6ea76e5114e2",
+			"name": "Delete Photo with Id5",
+			"url": "https://jsonplaceholder.typicode.com/photos/5",
+			"time": 392,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Checking status": true
+			},
+			"testPassFailCounts": {
+				"Checking status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Checking status": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3777,
+	"collection": {
+		"requests": [
+			{
+				"id": "6e51e3f6-bf96-4305-8b63-4562c1f3570b",
+				"method": "GET"
+			},
+			{
+				"id": "00b8f171-2d67-4423-8f54-3303da1675b6",
+				"method": "GET"
+			},
+			{
+				"id": "9e1c1a6e-1786-480c-9a42-6564a8a2874d",
+				"method": "GET"
+			},
+			{
+				"id": "a3cd4669-6610-47b0-a41d-a6e84432db25",
+				"method": "POST"
+			},
+			{
+				"id": "72a56f68-40cc-4594-acd7-d2d307c31bd2",
+				"method": "PUT"
+			},
+			{
+				"id": "6ad4d958-2e38-4683-a31a-33925e1ba81e",
+				"method": "DELETE"
+			},
+			{
+				"id": "563bfeb2-3640-44ee-9d6e-fac00765d947",
+				"method": "GET"
+			},
+			{
+				"id": "62855dbe-39b8-4d1e-9c10-811af16acf45",
+				"method": "POST"
+			},
+			{
+				"id": "92312edf-f357-432d-b97f-3360868ec36c",
+				"method": "PUT"
+			},
+			{
+				"id": "24cdca37-cec2-4f8c-83df-6ea76e5114e2",
+				"method": "DELETE"
+			}
+		]
+	}
+}

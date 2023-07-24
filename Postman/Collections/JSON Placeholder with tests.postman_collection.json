@@ -377,6 +377,39 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Delete Photo with Id5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Checking status\", () => {\r",
+							"    pm.expect(pm.response.status).to.be.eql(\"OK\");\r",
+							"})\r",
+							"\r",
+							"console.log(pm.response.status)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/photos/5",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"photos",
+						"5"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
