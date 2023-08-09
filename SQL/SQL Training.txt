@@ -22,7 +22,7 @@ SELECT MAX
 SELECT MAX(Price) FROM `products`;
 SELECT MAX(amount) AS 'Najwyższa płatność' FROM `payments`;
 SELECT MAX(amount) FROM payments WHERE customerNumber = '112';
-SELECT MAX(priceEach) FROM orderdetails
+SELECT MAX(priceEach) FROM orderdetails;
 
 SELECT COUNT
 SELECT COUNT(CustomerID) FROM `customers` WHERE Country = 'Mexico';
@@ -38,8 +38,8 @@ SELECT AVG(amount) FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '200
 SELECT SUM
 SELECT SUM(Price) FROM products WHERE CategoryID = 2;
 SELECT SUM(Price) FROM `products` WHERE SupplierID = 2;
-SELECT SUM(amount) FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '2004-01-31'
-SELECT SUM(amount), customerNumber FROM payments GROUP BY customerNumber ORDER BY SUM(amount) ASC
+SELECT SUM(amount) FROM payments WHERE paymentDate BETWEEN '2004-01-01' AND '2004-01-31';
+SELECT SUM(amount), customerNumber FROM payments GROUP BY customerNumber ORDER BY SUM(amount) ASC;
 
 SELECT AVG
 SELECT AVG(Price) AS 'Średnia Cena napojów' FROM `products` WHERE CategoryID = 1;
@@ -69,20 +69,21 @@ SELECT Count(customerNumber), country FROM `customers` WHERE NOT country = 'USA'
 WHERE BETWEEN
 SELECT * FROM `employees` WHERE BirthDate BETWEEN '1950-01-01' AND '1960-01-01' ORDER BY BirthDate DESC;
 SELECT * FROM `products` WHERE quantityInStock BETWEEN 1 And 2000 ORDER BY quantityInStock ASC;
-SELECT * FROM `products` WHERE quantityInStock BETWEEN 1 AND 1000 ORDER By quantityInStock DESC
+SELECT * FROM `products` WHERE quantityInStock BETWEEN 1 AND 1000 ORDER By quantityInStock DESC;
 
 INSERT INTO
 INSERT INTO employees VALUES (NULL, 'prcownik', 'roku', '1995-01-22', NULL, NULL);
-INSERT INTO offices VALUES(8, 'Wrocław', null, 'wrocławska 23', null, 'Dolnośląskie', 'Polska', '50-550', 'EU')
+INSERT INTO offices VALUES(8, 'Wrocław', null, 'wrocławska 23', null, 'Dolnośląskie', 'Polska', '50-550', 'EU');
 
 UPDATE
 UPDATE employees SET Photo = 'brzydkie zdjęcie.jpg', Notes = 'nasz wymarzony pracownik' WHERE EmployeeID = 11;
-UPDATE products SET productLine = 'Classic Cars' WHERE productCode = 'S10_1678'
+UPDATE products SET productLine = 'Classic Cars' WHERE productCode = 'S10_1678';
 UPDATE employees SET jobTitle = 'VP Marketing' WHERE employeeNumber = 1056;
 UPDATE customers SET addressLine2 = 'Rue Royale' Where customerNumber = 103;
-UPDATE offices SET addressLine2 = 'Rue Morgue 1', state = 'Provance' WHERE officeCode = 4
-UPDATE suppliers SET City = 'Okayma' WHERE SupplierID = 4
-UPDATE new_table SET column3 = 4 WHERE column1 = 1
+UPDATE offices SET addressLine2 = 'Rue Morgue 1', state = 'Provance' WHERE officeCode = 4;
+UPDATE suppliers SET City = 'Okayma' WHERE SupplierID = 4;
+UPDATE new_table SET column3 = 4 WHERE column1 = 1;
+UPDATE weatherconditions SET Date = '11-02-2025', Rain = 'No' WHERE ID = 1;
 
 LIMIT
 SELECT * FROM `products` ORDER BY Price DESC LIMIT 3;
@@ -95,13 +96,14 @@ SELECT * FROM `products` WHERE CategoryID = 1 OR CategoryID = 2;
 SELECT Count(orderNumber), status FROM `orders` Where status = 'cancelled' OR status = 'disputed' GROUP BY status;
 
 WHERE IS NOT NULL
-SELECT * FROM customers WHERE addressLine2 IS NOT NULL
+SELECT * FROM customers WHERE addressLine2 IS NOT NULL;
 SELECT * FROM customers WHERE country = 'Australia' AND addressLine2 IS NOT NULL;
 SELECT * FROM orders WHERE comments IS NOT NULL;
-SELECT * FROM `offices` WHERE state IS NOT NULL
+SELECT * FROM `offices` WHERE state IS NOT NULL;
 
 DELETE
-DELETE FROM `orders` WHERE OrderID = 10448
+DELETE FROM `orders` WHERE OrderID = 10448;
+DELETE FROM weatherconditions WHERE ID = 1;
 
 GROUP BY
 SELECT * FROM `customers` GROUP BY Country;
@@ -137,38 +139,40 @@ SELECT categories.CategoryName, products.ProductName FROM categories RIGHT JOIN 
 
 INSERT INTO
 INSERT INTO products VALUES ('s11' , 'XXX', 'Motorcycles' , '1:11' , 'x' , 'x', 'x', 'x', 'x' );
-INSERT INTO offices VALUES(NULL, 'Wrocław', '733 053 505', 'Pl. Zgody', '9/13', 'Dolnośląskie', 'Poland', '50-432', 'Europe') 
-INSERT INTO Projects VALUES(2, 'NewApp', 'BestApps', '1987-11-18') 
+INSERT INTO offices VALUES(NULL, 'Wrocław', '733 053 505', 'Pl. Zgody', '9/13', 'Dolnośląskie', 'Poland', '50-432', 'Europe') ;
+INSERT INTO Projects VALUES(2, 'NewApp', 'BestApps', '1987-11-18') ;
 INSERT INTO new_table VALUES(1,2,3);
+INSERT INTO weatherconditions VALUES (1, '10-02-2025', 'Yes', 'Slicks');
 
 DELETE
-DELETE FROM products WHERE productName = 'XXX'
-DELETE FROM offices WHERE officeCode = 8
+DELETE FROM products WHERE productName = 'XXX';
+DELETE FROM offices WHERE officeCode = 8;
 
 UNION / UNION ALL
 SELECT city FROM customers UNION SELECT city FROM  offices ORDER By city ASC;
 
 CREATE DATABASE
-CREATE DATABASE Testowa
+CREATE DATABASE Testowa;
 
 CREATE TABLE
 CREATE TABLE test_table (Number int PRIMARY KEY AUTO_INCREMENT, Name varchar(20), Last_name varchar(20), Birth_Date int);
 CREATE TABLE new_table (column1 int(20) AUTO_INCREMENT PRIMARY KEY, column2 varchar(20) NOT NULL);
 CREATE TABLE Table_22 (Id_Number int AUTO_INCREMENT PRIMARY KEY, FirstName varchar(20) , LastName Varchar (20), Country Varchar (20), Phone_number int (40) NOT NULL )
 CREATE TABLE Projects ( ProjectId int NOT NULL AUTO_INCREMENT PRIMARY KEY, Project_Name varchar(20), Customer varchar(20), RunDate date)
+CREATE TABLE WeatherConditions (ID int AUTO_INCREMENT PRIMARY KEY, Date varchar(30), Rain varchar(10), TyreType varchar(10))
 
 DROP TABLE
-DROP TABLE test_table
+DROP TABLE test_table;
+DROP TABLE weatherconditions;
 
 ALTER TABLE ADD
-ALTER TABLE test_table ADD Country Varchar(20)
-ALTER TABLE table_22 ADD Description Varchar(120)
-ALTER TABLE new_table ADD column3 int
+ALTER TABLE test_table ADD Country Varchar(20);
+ALTER TABLE table_22 ADD Description Varchar(120);
+ALTER TABLE new_table ADD column3 int;
 
 ALTER TABLE MODIFY COLUMN
-ALTER TABLE test_table MODIFY COLUMN Birth_Date int NOT NULL
-ALTER TABLE new_table MODIFY column2 varchar(10)
-
-ALTER COLUM DROP COLUMN
-ALTER TABLE test_table DROP COLUMN Country
-ALTER TABLE new_table DROP column2
+ALTER TABLE test_table MODIFY COLUMN Birth_Date int NOT NULL;
+ALTER TABLE new_table MODIFY column2 varchar(10);
+ALTER COLUM DROP COLUMN;
+ALTER TABLE test_table DROP COLUMN Country;
+ALTER TABLE new_table DROP column2;
