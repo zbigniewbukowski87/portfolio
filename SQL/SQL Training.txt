@@ -46,10 +46,13 @@ SELECT AVG(Price) AS 'Średnia Cena napojów' FROM `products` WHERE CategoryID =
 
 ORDER BY ASC
 SELECT * FROM `products` ORDER BY Price ASC;
+SELECT * FROM `drivers` WHERE dob >= "1970-01-01" ORDER BY dob ASC;
+SELECT * FROM `races` ORDER BY year ASC;
 
 ORDER BY DESC
 SELECT * FROM `employees` ORDER BY BirthDate DESC;
 SELECT * FROM orderdetails ORDER BY quantityOrdered DESC;
+SELECT * FROM `results` ORDER BY raceId DESC;
 
 WHERE LIKE
 SELECT * FROM `employees` WHERE FirstName LIKE 'A%';
